@@ -23,10 +23,13 @@ header {
     align-items: center;
     position: relative;
 }
-
+.logo {
+    margin-inline: 50px;
+}
 .logo h1 {
     font-size: 36px;
     font-family: 'Paytone One';
+    padding-inline: 20px;
 }
 
 .logo p {
@@ -52,7 +55,19 @@ header {
     transform: translateY(-50%);
     background-color: #fcb3b3;
     border-radius: 3px;
-    padding: 4px 20px;
+    padding: 5px 20px 3.5px ;
     border: none;
     cursor: pointer;
+}
+/*Chỉnh ảnh img\search thu nhỏ lại */
+.search_bar img{
+    width: 15px;
+}
+
+.exp_bar {
+    position: absolute;
+    top: 10px;
+}  
+.user_bar img{
+    width: 30px;
 }
