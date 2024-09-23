@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nono Sans';
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #fcb3b3;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo h1 {
+    font-size: 36px;
+    font-family: 'Paytone One';
+}
+
+.logo p {
+    font-size: 14px;
+}
+
+.search_bar {
+    position: relative;
+    width: 300px;
+}
+
+.search_bar input {
+    width: 100%;
+    padding: 8px 65px 8px 10px; 
+    border-radius: 7px;
+    border: 1px solid #ccc;
+}
+
+.search_bar button {
+    position: absolute;
+    right: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fcb3b3;
+    border-radius: 3px;
+    padding: 4px 20px;
+    border: none;
+    cursor: pointer;
+}
