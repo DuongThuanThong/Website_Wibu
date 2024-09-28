@@ -8,41 +8,55 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Paytone+One&display=swap" rel="stylesheet">
-
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/eff669a9ab.js" crossorigin="anonymous"></script>
     <!-- Css -->
     <link rel="stylesheet" href="css/main.css">
     <title>Wibu Dreamland</title>
 </head>
 <body>
+    <!-- HEADER_WEBSITE -->
     <header>
         <!-- Logo of header -->
-        <div class = 'logo'>
+        <div class='logo'>
             <img src="img\logo_1.png" alt="">
         </div>
         <!-- Thanh tìm kiếm -->
-        <div class="search_bar">
+        <form action="" class="search_bar">
             <input type="text" placeholder="Bạn đang tìm gì...?">
-            <button>
-                    <img src="img\search.png">
-            </button>
-        </div>
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
         <!-- Thanh exp -->
         <div class="exp-bar">
-            <span><b>EXP:</b> 160/200</span>
+            <span class ="exp">  
+                EXP:
+                <span id="exp-value">0</span>
+                <span id="exp-value-max">/160</span>
+            </span>
             <div class="progress">
-                <div class="progress_bar" style="width: 80%;"></div>
+                <div id="exp-progress"></div>
             </div>
         </div>
+        <!-- Avatar, Tên, Lv, Giỏ hàng, Yêu thích -->
+        <div class = 'user-bar'>
+            <i class="fa-solid fa-circle-user fa-flip-horizontal"></i>
 
-
-        
-        <div class = 'user_bar'>
-            <!-- Mốt thêm function từ Javascript vào đây -->
-            <span>Dương Thuận Thông</span>
-            <span>Lv: 1</span>
-            <img src="img\account.png" alt="" >
-            <img src="img\shopping-cart.png" alt="">
+            <div class ="user-info">
+                <span id = "user-name">Dương Thuận Thông</span>
+                <span id = "lv">Lv: 1</span>
+            </div>
             
+            <div class = "favorite-heart">
+                <i class="fa-regular fa-heart"></i>
+                <span>Sản phẩm yêu thích</span>
+            </div>
+
+            <div class = 'cart-shop'>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Giỏ hàng</span>
+            </div>
+                
+
         </div>
 
     </header>

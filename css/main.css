@@ -1,94 +1,181 @@
 * {
-    margin: 0;
-    padding: 0;
+    font-family: 'Nono Sans', sans-serif;
+    margin: 0;padding: 0;
     box-sizing: border-box;
-    font-family: 'Nono Sans';
+    outline : none;border:none;
+    text-decoration: none; text-transform: none;
+    transition: all .2s linear;
+}
+:root{
+    --bg_color: #f0f0f0;
+    --header_color: #fcb3b3;
+    --yellow-color:#f9a01b;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
 }
 
+
 html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top:7rem ;
     scroll-behavior: smooth;
+}
+
+
+html::-webkit-scrollbar{
+    width: 8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--header_color);
 }
 
 body {
     display: flex;
-    flex-direction: column;
-    background-color: #f0f0f0;
+    flex-direction: column; /*Sắp xếp theo chiều dọc*/
+    background-color: var(--bg_color);
 }
 
 header {
+    position: fixed;
+    top:0; left:0;right:0;
     width: 100%;
-    height: 50px;
-    background-color: #fcb3b3;
+    height: 50px; 
+    background-color: var(--header_color);
+    box-shadow: var(--box-shadow);
+    padding: 1.5rem 0;
+    z-index: 100000;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow: hidden;
+}
+
+
+/*Logo*/
+header .logo {
+    width: 100px;
+    max-height: 100%;
     position: relative;
+    align-items: center;
+    display: flex;
+    top: -1rem;
+    margin-inline:5rem; 
 }
 
-.logo {
-    width: 100px; /* Kích thước container của logo */
-    height: 100px; /* Chiều cao của container */
+header .logo img {  
+    width: 10rem;       
+    object-fit: contain;
+}
+
+
+/*Thanh search*/
+header .search_bar{
     position: relative;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    border-radius: 0.7rem;
+    width: 30rem;
+    height: 3.8rem;
+    padding: 0;
 }
 
-.logo img {
-    width: 110%; 
-    height: 75%;
-    left: -10px;
-    position: absolute;
-    margin-inline: 110px;
- 
-}
-
-.search_bar {
-    position: relative;
-    width: 300px;
-}
-
-.search_bar input {
+header .search_bar input{
+    height: 100%;
     width: 100%;
-    padding: 8px 65px 8px 10px; 
-    border-radius: 7px;
-    border: 1px solid #ccc;
+    background: none;
+    padding: 1rem 7rem 1rem 2rem;
+    font-size: 1.5rem;
+    text-transform: none;
 }
 
-.search_bar button {
-    position: absolute;
-    right: 3px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: #fcb3b3;
-    border-radius: 3px;
-    padding: 5px 20px 3.5px ;
-    border: none;
+header .search_bar .fa-magnifying-glass{
+   position: absolute;
+   top: 0;
+   right: 0;
+   display: flex;
+   width: 20%;
+   height: 85%;
+   justify-content: center;
+   align-items: center;
+   background-color:var(--header_color);
+   border-radius: .5rem;
+   margin: .3rem;
+   font-size: 2rem;
+   cursor: pointer;
+}
+
+/*Thanh EXP*/
+header .exp-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1.3rem;
+}
+header .exp-bar .exp {
+    padding-left: 0.5rem;
+}
+header .progress {
+    width: 20rem;
+    height: 1.5rem;
+    background-color: white;
+    border-radius: 0.75rem;
+    border: 0.5px solid black;
+}
+
+header .progress #exp-progress {
+    height: 99%;
+    background-color: var(--yellow-color);
+    border-radius: 0.75rem;
+    width: 50%;
+    border-right: 1px solid black;
+}
+
+/*AVtatar, Thông tin,LV*/
+header .user-bar{
+    display: flex;
+    align-items: center;
+    margin-right: 5rem;
+}
+header .user-bar .fa-circle-user {
+    font-size: 3.4rem;
     cursor: pointer;
 }
-/*Chỉnh ảnh img\search thu nhỏ lại */
-.search_bar img{
-    width: 15px;
+
+header .user-bar .user-info span{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    font-size: 1.3rem;
+    margin-left:0.5rem;
+    margin-right: 7rem;
 }
 
-.exp_bar {
-    position: absolute;
-    top: 10px;
-    right: 180px;
-}  
-.exp_bar span{
-    font-size: 14px;
-}
-.progess {
-    background-color: #ddd;
-    width: 100px;
-    height: 10px;
-    border-radius: 5px;
-    margin-top: 5px;
-}
-.progess_bar{
-    background-color: #ff8800;
-    height: 100%;
-    border-radius: 5px;
-}
-.user_bar img{
-    width: 30px;
+
+/*Giỏ hàng, Yêu thích*/
+header .user-bar .favorite-heart, .cart-shop{
+    position: relative;
+    font-size: 2.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
+header .user-bar .cart-shop{
+    width: 10rem;
+    height: 4rem;
+    border-radius:5px ;
+    border: 2px solid black;
+    margin-left:5rem ;
+}
+
+header .user-bar .favorite-heart span, .cart-shop span {
+    padding-left:0.5rem ;
+    font-size: 1.3rem;
+}
