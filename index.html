@@ -40,14 +40,16 @@
             </div>
         </div>
         <!-- Avatar, Tên, Lv, Giỏ hàng, Yêu thích -->
-        <div class = 'user-bar'>
-            <div class = 'img-user'>
-                <i class="fa-solid fa-circle-user fa-flip-horizontal"></i>
-            </div>
-
-            <div class ="user-info">
-                <span id = "user-name">Đăng kí/ Đăng nhập</span>
-                <span id = "lv">Lv: 0</span>
+        <div class = 'user-bar' onclick = 'window.location.href="login.html"'>
+            <div class="user">
+                <div class = 'img-user'>
+                    <i class="fa-solid fa-circle-user fa-flip-horizontal"></i>
+                </div>
+    
+                <div class ="user-info">
+                    <span id = "user-name">Đăng nhập/ Đăng kí</span>
+                    <span id = "lv">Lv: 0</span>
+                </div>
             </div>
             
             <div class = "favorite-heart">
@@ -72,7 +74,7 @@
                 <div class="menu-btn"><i class="fa-solid fa-bars" id = "btn-sidebar"></i></div>
                 <ul class ="nav-list">
                     <li class="nav-list-item">
-                        <a href="#" class="nav-link">
+                        <a href="index.html" class="nav-link">
                             <img src="https://img.icons8.com/fluency-systems-filled/50/home.png" alt="home"/>
                             <span class = "link-text">Trang chủ</span>
                         </a>
