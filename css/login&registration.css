@@ -1,0 +1,116 @@
+*{
+    font-family: 'Nono Sans', sans-serif;
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    outline : none;border:none;
+    text-decoration: none; text-transform: none;
+    transition: all .2s linear;
+}
+
+:root{
+    --bg_color: #f0f0f0;
+    --header_color: #fcb3b3;
+    --yellow-color:#f9a01b;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --white-dark: #f0f0f0;
+    --menu-color: white ;
+    --focus-hover-color:rgb(192,192,192,.5);
+
+}
+html{
+    font-size: 12px;
+}
+
+.main-login{
+    top: 0;
+    right: 0;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-login .wrapper{
+    position: relative;
+    width: 55rem;
+    min-height: 40rem;
+    border-radius: 3%;
+    padding: 4rem;
+    box-shadow: 0 0 4rem rgba(0,0,0,.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.main-login .wrapper .login-box h2{
+    font-size: 4rem;
+    text-align: center;
+}
+
+
+.main-login .wrapper .login-box .input-box{
+    position: relative;
+    width: 40rem;
+    margin: 2rem 4rem;
+    display: flex;
+    align-items: center;
+}
+
+.main-login .wrapper .login-box .input-box input{
+    width: 100%;
+    height: 5rem;
+    background:transparent;
+    border: 2px solid black;
+    border-radius: 1rem;
+    padding: 2rem 6rem 2rem 4rem;
+    font-size: 1.5rem;
+}
+
+.main-login .wrapper .login-box .input-box i{
+    position: absolute;
+    font-size: 2rem;
+    left: 1rem;
+}
+
+.main-login .wrapper .login-box .forgot-pass {
+    margin-left: 4rem;
+    margin-bottom:2rem;
+}
+
+.main-login .wrapper .login-box .forgot-pass a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.main-login .wrapper .login-box .forgot-pass:hover{
+    text-decoration: underline;
+}
+
+.main-login .wrapper .login-box .button{
+    margin-left: 3.5rem;
+    margin-right: 3rem;
+}
+.main-login .wrapper .login-box button{
+    width: 100%;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    margin-bottom: 1rem;
+    height: 4rem;
+}
+
+.main-login .wrapper .login-box .sign-link{
+    margin-left: 3.5rem;
+    font-size: 1.7rem;
+}
+
+.main-login .wrapper .login-box .sign-link a{
+    color: black;
+    font-weight: 600;
+}
+
+.main-login .wrapper .login-box .sign-link a:hover{
+    text-decoration: underline;
+}
+
+
+
