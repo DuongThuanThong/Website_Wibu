@@ -1,57 +1,62 @@
-*{
+* {
     font-family: 'Nono Sans', sans-serif;
-    margin: 0;padding: 0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    outline : none;border:none;
-    text-decoration: none; text-transform: none;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: none;
     transition: all .2s linear;
 }
-:root{
+
+:root {
     --bg_color: #f0f0f0;
     --header_color: #fcb3b3;
-    --yellow-color:#f9a01b;
-    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+    --yellow-color: #f9a01b;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
     --white-dark: #f0f0f0;
-    --menu-color: white ;
-    --focus-hover-color:rgb(192,192,192,.5);
-
+    --menu-color: white;
+    --focus-hover-color: rgb(192, 192, 192, .5);
 }
-
 
 html {
     font-size: 62.5%;
     overflow-x: hidden;
-    scroll-padding-top:7rem ;
+    scroll-padding-top: 7rem;
     scroll-behavior: smooth;
 }
 
-
-html::-webkit-scrollbar{
+html::-webkit-scrollbar {
     width: 1rem;
     border: 2px solid black;
 }
 
-html::-webkit-scrollbar-track{
+html::-webkit-scrollbar-track {
     background: transparent;
 }
 
-html::-webkit-scrollbar-thumb{
+html::-webkit-scrollbar-thumb {
     background: var(--header_color);
     border: 2px solid black;
 }
 
 body {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     background-color: var(--bg_color);
 }
 
+
 /*Header*/
+
 header {
     position: fixed;
-    top:0; left:0;right:0;
+    top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-    height: 5.5rem; 
+    height: 5.5rem;
     background-color: var(--header_color);
     box-shadow: var(--box-shadow);
     z-index: 1000;
@@ -65,6 +70,7 @@ header {
 
 
 /*Logo*/
+
 header .logo {
     width: 100px;
     max-height: 100%;
@@ -74,14 +80,15 @@ header .logo {
     top: -1rem;
 }
 
-header .logo img {  
-    width: 10rem;       
+header .logo img {
+    width: 10rem;
     object-fit: contain;
 }
 
 
 /*Thanh search*/
-header .search-bar{
+
+header .search-bar {
     position: relative;
     background-color: var(--white-dark);
     display: flex;
@@ -92,7 +99,7 @@ header .search-bar{
     padding: 0;
 }
 
-header .search-bar input{
+header .search-bar input {
     height: 100%;
     width: 100%;
     background: none;
@@ -101,32 +108,34 @@ header .search-bar input{
     text-transform: none;
 }
 
-header .search-bar .fa-magnifying-glass{
-   position: absolute;
-   top: 0;
-   right: 0;
-   display: flex;
-   width: 20%;
-   height: 85%;
-   justify-content: center;
-   align-items: center;
-   background-color:var(--header_color);
-   border-radius: .5rem;
-   margin: .3rem;
-   font-size: 2rem;
-   cursor: pointer;
+header .search-bar .fa-magnifying-glass {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    width: 20%;
+    height: 85%;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--header_color);
+    border-radius: .5rem;
+    margin: .3rem;
+    font-size: 2rem;
+    cursor: pointer;
 }
- 
+
 header .search-bar :focus {
     box-shadow: var(--box-shadow);
     border-radius: 0.7rem;
 }
 
-header .search-bar .fa-magnifying-glass:hover{
+header .search-bar .fa-magnifying-glass:hover {
     color: white;
 }
 
+
 /*Thanh EXP*/
+
 header .exp-bar {
     display: flex;
     flex-direction: column;
@@ -147,7 +156,8 @@ header .progress {
 }
 
 header .progress #exp-progress {
-    width: 10%; /*Thay đổi cột exp ở đây */
+    width: 10%;
+    /*Thay đổi cột exp ở đây */
     max-width: 100%;
     height: 99%;
     background-color: var(--yellow-color);
@@ -155,18 +165,22 @@ header .progress #exp-progress {
     border-right: 1px solid black;
 }
 
+
 /*Căn chỉnh các phần của user-bar nằm căn giữa*/
-header .user-bar{
+
+header .user-bar {
     display: flex;
     align-items: center;
 }
 
+
 /*AVtatar, Thông tin,LV*/
-header .user-bar .user{
+
+header .user-bar .user {
     display: flex;
     justify-self: center;
     align-items: center;
-    margin-right:5rem ;
+    margin-right: 5rem;
     cursor: pointer;
 }
 
@@ -179,16 +193,19 @@ header .user-bar .img-user {
     cursor: pointer;
 }
 
-header .user-bar .user-info span{
+header .user-bar .user-info span {
     display: flex;
     flex-direction: column;
-    align-items:flex-start;
+    align-items: flex-start;
     font-size: 1.2rem;
     margin-left: .5rem;
 }
 
+
 /*Giỏ hàng, Yêu thích*/
-header .user-bar .favorite-heart, .cart-shop{
+
+header .user-bar .favorite-heart,
+.cart-shop {
     position: relative;
     font-size: 2.3rem;
     display: flex;
@@ -198,29 +215,31 @@ header .user-bar .favorite-heart, .cart-shop{
     transition: all 0.2s ease;
 }
 
-header .user-bar .cart-shop{
+header .user-bar .cart-shop {
     width: 12rem;
     height: 4rem;
-    border-radius:5px ;
+    border-radius: 5px;
     border: 2px solid black;
-    margin-left:5rem ;
+    margin-left: 5rem;
 }
 
-header .user-bar .favorite-heart span, .cart-shop span {
-    padding-left:0.5rem ;
+header .user-bar .favorite-heart span,
+.cart-shop span {
+    padding-left: 0.5rem;
     font-size: 1.3rem;
 }
 
-header .user-bar .cart-shop:hover{
+header .user-bar .cart-shop:hover {
     color: white;
     border: 2px solid white;
     border-bottom: 4.5px solid white;
     border-right: 3.5px solid white;
     transform: translateX(-1rem);
 }
- 
+
 
 /*Main*/
+
 main {
     width: 100%;
     height: 400vh;
@@ -228,7 +247,9 @@ main {
     position: relative;
 }
 
+
 /* Sidebar */
+
 main .main-nav {
     position: fixed;
     top: 5rem;
@@ -241,12 +262,16 @@ main .main-nav {
     z-index: 99;
 }
 
+
 /* Mở rộng sidebar */
+
 main .main-nav.active {
     width: 20rem;
 }
 
+
 /* Nút mở/đóng sidebar */
+
 main .main-nav .navbar .menu-btn {
     position: absolute;
     right: 1.7rem;
@@ -260,18 +285,21 @@ main .main-nav .navbar .menu-btn {
     padding-block: 0.3rem;
 }
 
-main .main-nav .navbar .menu-btn:hover{
-    background-color:var(--focus-hover-color);
+main .main-nav .navbar .menu-btn:hover {
+    background-color: var(--focus-hover-color);
     border-radius: .5rem;
-
 }
 
+
 /* Danh sách menu */
+
 main .main-nav .navbar .nav-list {
     padding-top: 7rem;
 }
 
+
 /* Liên kết trong danh sách menu */
+
 main .main-nav .navbar .nav-list .nav-list-item .nav-link {
     display: flex;
     align-items: center;
@@ -286,19 +314,25 @@ main .main-nav .navbar .nav-list .nav-list-item .nav-link img {
     margin-right: 1.7rem;
 }
 
+
 /* Ẩn các chữ khi sidebar thu nhỏ */
+
 main .main-nav .navbar .nav-list .nav-list-item .nav-link span {
     display: none;
     font-size: 1.5rem;
 }
 
+
 /* Hiển thị các chữ khi sidebar mở rộng */
+
 main .main-nav.active .navbar .nav-list .nav-list-item .nav-link span {
     display: inline;
     color: black;
 }
 
+
 /* Hover hiệu ứng */
+
 main .main-nav .navbar .nav-list .nav-list-item {
     position: relative;
     list-style-type: none;
@@ -319,6 +353,7 @@ main .main-nav.active .navbar .nav-list .nav-list-item:hover {
 
 
 /* Tooltip - chỉ hiển thị khi sidebar thu nhỏ*/
+
 main .main-nav .navbar .nav-list .nav-list-item .tooltip {
     position: absolute;
     width: 15rem;
@@ -338,12 +373,15 @@ main .main-nav .navbar .nav-list .nav-list-item .tooltip {
 
 
 /* Hiển thị tooltip khi sidebar thu nhỏ */
+
 main .main-nav:hover .navbar .nav-list .nav-list-item:hover .tooltip {
     top: 30%;
     opacity: 1;
 }
 
+
 /* Ẩn tooltip khi sidebar mở rộng */
+
 main .main-nav.active .navbar .nav-list .nav-list-item:hover .tooltip {
     opacity: 0;
 }
@@ -352,17 +390,15 @@ main .main-nav.active .navbar .nav-list .nav-list-item:hover .tooltip {
 /*MAIN*/
 
 
-
-
-
 /*Trang chủ*/
-.main-nav.active ~ .home-content{
+
+.main-nav.active~.home-content {
     left: 20.1rem;
     width: calc(100% - 20rem);
 }
 
 main .home-content {
-    position:absolute;
+    position: absolute;
     left: 7.3rem;
     width: calc(100% - 7rem);
     height: 100%;
@@ -377,17 +413,17 @@ main .home-content .content {
     justify-content: center;
 }
 
-main .home-content .content .slide-show{
+main .home-content .content .slide-show {
     position: relative;
     top: 0;
     display: flex;
     justify-content: center;
     top: 0.5rem;
-    width: 105rem;  
+    width: 105rem;
     height: 50rem;
 }
 
-main .home-content .content .slide-show .list-pic{
+main .home-content .content .slide-show .list-pic {
     display: block;
     width: 100%;
     height: 106%;
@@ -401,7 +437,7 @@ main .home-content .content .slide-show .list-pic .images-wrapper {
     display: flex;
     width: 100%;
     height: 100%;
-    transition:  .9s ease;
+    transition: .9s ease;
 }
 
 main .home-content .content .slide-show .list-pic .images-wrapper img {
@@ -417,10 +453,9 @@ main .home-content .content .slide-show .list-pic .btnLR {
     top: 40%;
     justify-content: space-between;
     padding: .5rem;
-    
 }
 
-main .home-content .content .slide-show .list-pic .btnLR i{
+main .home-content .content .slide-show .list-pic .btnLR i {
     font-size: 4rem;
     color: var(--yellow-color);
     padding: .5rem;
@@ -430,15 +465,112 @@ main .home-content .content .slide-show .list-pic .btnLR i{
     border: 2px solid black;
 }
 
-main .home-content .content .slide-show:hover .list-pic .btnLR i{
+main .home-content .content .slide-show:hover .list-pic .btnLR i {
     display: inline;
     background-color: var(--focus-hover-color);
 }
 
+#footer-1 {
+    background-color: var(--header_color);
+    padding: 15px 0;
+    text-align: center;
+}
 
+.wrapper-1 {
+    box-sizing: border-box;
+}
 
+.contact-1 {
+    color: black;
+    font-size: 24px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+}
 
+#sm-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
 
+#sm-icons li {
+    list-style: none;
+    background: white;
+    border-radius: 50%;
+    margin: 0 1rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.fa-brands {
+    color: black;
+    font-size: 24px;
+}
 
+#footer-2 {
+    height: 100vh;
+}
+
+.imformation-1 {
+    padding-top: 35px;
+    text-align: left;
+    font-size: 14px;
+    padding-left: 140px;
+}
+
+.site-footer {
+    border-bottom: 3px solid #dfdfdf;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.arrow li {
+    list-style: none;
+    padding-top: 5px;
+}
+
+.arrow li a {
+    color: black;
+    text-decoration: none;
+}
+
+.imformation-2 {
+    padding-top: 35px;
+    font-size: 14px;
+    padding-left: 140px;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-2 {
+    border-bottom: 3px solid #dfdfdf;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.address-footer li {
+    list-style: none;
+    padding-top: 5px;
+}
+
+.address-footer li a {
+    color: black;
+    text-decoration: none;
+}
+
+.address-footer li i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.fa {
+    color: red;
+}
 

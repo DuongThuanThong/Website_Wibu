@@ -1,28 +1,30 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- GOOGLE FONT -->
-        <!-- Kiểu chữ Noto San, Paytone -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Paytone+One&display=swap" rel="stylesheet">
+    <!-- Kiểu chữ Noto San, Paytone -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Paytone+One&display=swap" rel="stylesheet">
     <!-- FONT AWESOME -->
     <script src="https://kit.fontawesome.com/eff669a9ab.js" crossorigin="anonymous"></script>
     <!-- Css -->
     <link rel="stylesheet" href="css/main.css">
     <title>Wibu Dreamland</title>
 </head>
+
 <body>
     <!-- HEADER_WEBSITE -->
     <header>
-            <!-- Logo of header --> 
-            <div class='logo'>
-                <img src="img\logo_1.png" alt="">
-            </div>
+        <!-- Logo of header -->
+        <div class='logo'>
+            <img src="img\logo_1.png" alt="">
         </div>
-        
+        </div>
+
         <!-- Thanh tìm kiếm -->
         <form action="" class="search-bar">
             <input type="text" placeholder="Bạn đang tìm gì...?">
@@ -30,34 +32,34 @@
         </form>
         <!-- Thanh exp -->
         <div class="exp-bar">
-            <span class ="exp">  
+            <span class="exp">  
                 EXP:
                 <span id="exp-value">0</span>
-                <span id="exp-value-max">/160</span>
+            <span id="exp-value-max">/160</span>
             </span>
             <div class="progress">
                 <div id="exp-progress"></div>
             </div>
         </div>
         <!-- Avatar, Tên, Lv, Giỏ hàng, Yêu thích -->
-        <div class = 'user-bar' >
-            <div class="user" onclick = 'window.location.href="login.html"'>
-                <div class = 'img-user'>
+        <div class='user-bar'>
+            <div class="user" onclick='window.location.href="login.html"'>
+                <div class='img-user'>
                     <i class="fa-solid fa-circle-user fa-flip-horizontal"></i>
                 </div>
-    
-                <div class ="user-info">
-                    <span id = "user-name">Đăng nhập/ Đăng kí</span>
-                    <span id = "lv">Lv: 0</span>
+
+                <div class="user-info">
+                    <span id="user-name">Đăng nhập/ Đăng kí</span>
+                    <span id="lv">Lv: 0</span>
                 </div>
             </div>
-            
-            <div class = "favorite-heart">
+
+            <div class="favorite-heart">
                 <i class="fa-regular fa-heart"></i>
                 <span>Sản phẩm yêu thích</span>
             </div>
 
-            <div class = 'cart-shop'>
+            <div class='cart-shop'>
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span>Giỏ hàng</span>
             </div>
@@ -71,47 +73,47 @@
         <div class="main-nav">
             <nav class="navbar">
                 <!-- Trang chủ -->
-                <div class="menu-btn"><i class="fa-solid fa-bars" id = "btn-sidebar"></i></div>
-                <ul class ="nav-list">
+                <div class="menu-btn"><i class="fa-solid fa-bars" id="btn-sidebar"></i></div>
+                <ul class="nav-list">
                     <li class="nav-list-item">
                         <a href="index.html" class="nav-link">
-                            <img src="https://img.icons8.com/fluency-systems-filled/50/home.png" alt="home"/>
-                            <span class = "link-text">Trang chủ</span>
+                            <img src="https://img.icons8.com/fluency-systems-filled/50/home.png" alt="home" />
+                            <span class="link-text">Trang chủ</span>
                         </a>
-                        <span class = "tooltip">Trang chủ</span>
+                        <span class="tooltip">Trang chủ</span>
                     </li>
-        
+
                     <!-- Anime -->
                     <li class="nav-list-item">
-                        <a href="#" class ="nav-link">
-                            <img src="https://img.icons8.com/ios-filled/50/doraemon.png" alt="doraemon"/>
+                        <a href="#" class="nav-link">
+                            <img src="https://img.icons8.com/ios-filled/50/doraemon.png" alt="doraemon" />
                             <span>Bảng xếp hạng Anime</span>
                         </a>
-                        <span class = "tooltip">Bảng xếp hạng Anime</span>
+                        <span class="tooltip">Bảng xếp hạng Anime</span>
                     </li>
                     <!-- Managa -->
                     <li class="nav-list-item">
-                        <a href="#" class ="nav-link">
-                            <img src="https://img.icons8.com/ios-glyphs/30/book.png" alt="book"/>
+                        <a href="#" class="nav-link">
+                            <img src="https://img.icons8.com/ios-glyphs/30/book.png" alt="book" />
                             <span>Manga</span>
                         </a>
-                        <span class = "tooltip">Manga</span>
+                        <span class="tooltip">Manga</span>
                     </li>
                     <!-- Mô hình -->
                     <li class="nav-list-item">
-                        <a href="#" class ="nav-link">
-                            <img src="https://img.icons8.com/ios-filled/50/mobile-suit-gundam.png" alt="mobile-suit-gundam"/>
+                        <a href="#" class="nav-link">
+                            <img src="https://img.icons8.com/ios-filled/50/mobile-suit-gundam.png" alt="mobile-suit-gundam" />
                             <span>Mô hình</span>
                         </a>
-                        <span class = "tooltip">Mô hình</span>
+                        <span class="tooltip">Mô hình</span>
                     </li>
                     <!-- Trang phục Cosplay -->
                     <li class="nav-list-item">
-                        <a href="#" class ="nav-link">
-                            <img src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/66/external-Cosplay-geek-smashingstocks-glyph-smashing-stocks.png" alt="external-Cosplay-geek-smashingstocks-glyph-smashing-stocks"/>
+                        <a href="#" class="nav-link">
+                            <img src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/66/external-Cosplay-geek-smashingstocks-glyph-smashing-stocks.png" alt="external-Cosplay-geek-smashingstocks-glyph-smashing-stocks" />
                             <span>Trang phục Cosplay</span>
                         </a>
-                        <span class = "tooltip">Trang phục Cosplay</span>
+                        <span class="tooltip">Trang phục Cosplay</span>
                     </li>
                 </ul>
             </nav>
@@ -119,28 +121,130 @@
 
 
         <!-- HOME-CONTENT -->
-            <div class="home-content">
-                <div class="content">
-                    <div class="slide-show">
-                        <div class="list-pic">
-                            <div class="images-wrapper">
-                                <img src="img/2__1___1___1__93e4a132748647e6a3ff58b3fa64038a.webp">
-                                <img src="img/order.jpg">
-                            </div>
-                            <div class="btnLR">
-                                <i class="fa-solid fa-chevron-left"></i>
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
+        <div class="home-content">
+            <div class="content">
+                <div class="slide-show">
+                    <div class="list-pic">
+                        <div class="images-wrapper">
+                            <img src="img/2__1___1___1__93e4a132748647e6a3ff58b3fa64038a.webp">
+                            <img src="img/order.jpg">
                         </div>
-                    </div>                    
+                        <div class="btnLR">
+                            <i class="fa-solid fa-chevron-left"></i>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
 
         </div>
     </main>
 
 
+    <!--Footer-->
+    <div id="footer-1">
+        <div class="wrapper-1">
+            <div class="contact-1">
+                <h3>
+                    LIÊN HỆ
+                </h3>
+                <ul id="sm-icons">
+                    <li>
+                        <a href="http://www.twitter.com">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.facebook.com/sun.duong.902">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-pinterest"></i>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div id="footer-2">
+        <div class="wrapper-2">
+            <div class="imformation-1">
+                <h3 class="site-footer">
+                    LIÊN KẾT
+                </h3>
+                <ul class="arrow">
+                    <li>
+                        <a href="/" title="Trang Chủ">Trang Chủ</a>
+                    </li>
+
+                    <li>
+                        <a href="" title="Bảng xếp hạng Anime">Bảng xếp hạng Anime</a>
+                    </li>
+
+                    <li>
+                        <a href="" title="Manga">Manga</a>
+                    </li>
+
+                    <li>
+                        <a href="" title="Mô hình">Mô hình</a>
+                    </li>
+
+                    <li>
+                        <a href="" title="Trang phục Cosplay">Trang phục Cosplay</a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="imformation-2">
+                <div class="contact-2">
+                    <h2>
+                        LIÊN HỆ
+                    </h2>
+                    <ul class="address-footer">
+                        <li>
+                            <i class="fa fa-map-marker"></i>02 Võ Oanh - Bình Thạnh - Hò Chí Minh
+                        </li>
+
+                        <li>
+                            <i class="fa fa-phone"></i>Đường dây nóng: 0971 610 804
+
+                        </li>
+
+                        <li>
+                            <i class="fa fa-envelope-o"></i>Hỗ trợ: support@anime.vn
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <!-- Javascript -->
     <script src="js/main.js" defer></script>
 </body>
+
 </html>
