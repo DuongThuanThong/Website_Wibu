@@ -436,6 +436,7 @@ Anime {
 }
 
 Anime ul.Anime-hot {
+  position: relative;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
@@ -446,7 +447,7 @@ Anime ul.Anime-hot {
   margin-top: 2rem;
   border-radius: 2rem;
   height: 38rem;
-  width: 137rem;
+  width: 91%;
   overflow: hidden;
 }
 Anime ul.Anime-hot li {
@@ -480,4 +481,37 @@ Anime ul.Anime-hot li .anime-name {
 
 Anime ul.Anime-hot li:hover .anime-name {
   opacity: 1;
+}
+
+/* Logo hot */
+Anime ul.Anime-hot .hot-logo {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 5px;
+  animation: pulse 1.5s infinite;
+  font-size: 2rem;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+Anime ul.Anime-hot .see-more {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  font-size: 2rem;
 }
