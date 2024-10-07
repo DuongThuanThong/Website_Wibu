@@ -1,34 +1,24 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- GOOGLE FONT -->
-        <!-- Kiểu chữ Noto San, Paytone -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Paytone+One&display=swap" rel="stylesheet">
-    <!-- FONT AWESOME -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Paytone+One&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/eff669a9ab.js" crossorigin="anonymous"></script>
-    <!-- Css -->
     <link rel="stylesheet" href="css/main.css">
     <title>Wibu Dreamland</title>
 </head>
 <body>
-    <!-- HEADER_WEBSITE -->
     <header>
-            <!-- Logo of header --> 
-            <div class='logo'>
-                <img src="img\logo_1.png" alt="">
-            </div>
+        <div class='logo'>
+            <img src="img/logo_1.png" alt="Wibu Dreamland">
         </div>
-        
-        <!-- Thanh tìm kiếm -->
         <form action="" class="search-bar">
             <input type="text" placeholder="Bạn đang tìm gì...?">
             <i class="fa-solid fa-magnifying-glass"></i>
         </form>
-        <!-- Thanh exp -->
         <div class="exp-bar">
             <span class ="exp">  
                 EXP:
@@ -39,108 +29,211 @@
                 <div id="exp-progress"></div>
             </div>
         </div>
-        <!-- Avatar, Tên, Lv, Giỏ hàng, Yêu thích -->
-        <div class = 'user-bar' >
-            <div class="user" onclick = 'window.location.href="login.html"'>
-                <div class = 'img-user'>
+        <div class='user-bar'>
+            <div class="user" onclick='window.location.href="login.html"'>
+                <div class='img-user'>
                     <i class="fa-solid fa-circle-user fa-flip-horizontal"></i>
                 </div>
-    
-                <div class ="user-info">
-                    <span id = "user-name">Đăng nhập/ Đăng kí</span>
-                    <span id = "lv">Lv: 0</span>
+                <div class="user-info">
+                    <span id="user-name">Đăng nhập/ Đăng kí</span>
+                    <span id="lv">Lv: 0</span>
                 </div>
             </div>
-            
-            <div class = "favorite-heart">
+            <div class="favorite-heart">
                 <i class="fa-regular fa-heart"></i>
                 <span>Sản phẩm yêu thích</span>
             </div>
-
-            <div class = 'cart-shop'>
+            <div class='cart-shop'>
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span>Giỏ hàng</span>
             </div>
         </div>
     </header>
 
-    <!-- MAIN_WEBSITE -->
     <main>
-
-        <!-- MENU-NAV -->
         <div class="main-nav">
             <nav class="navbar">
-                <!-- Trang chủ -->
-                <div class="menu-btn"><i class="fa-solid fa-bars" id = "btn-sidebar"></i></div>
-                <ul class ="nav-list">
+                <div class="menu-btn"><i class="fa-solid fa-bars" id="btn-sidebar"></i></div>
+                <ul class="nav-list">
                     <li class="nav-list-item">
                         <a href="index.html" class="nav-link">
                             <img src="https://img.icons8.com/fluency-systems-filled/50/home.png" alt="home"/>
-                            <span class = "link-text">Trang chủ</span>
+                            <span class="link-text">Trang chủ</span>
                         </a>
-                        <span class = "tooltip">Trang chủ</span>
+                        <span class="tooltip">Trang chủ</span>
                     </li>
-        
-                    <!-- Anime -->
                     <li class="nav-list-item">
-                        <a href="#" class ="nav-link">
+                        <a href="#" class="nav-link">
                             <img src="https://img.icons8.com/ios-filled/50/doraemon.png" alt="doraemon"/>
                             <span>Bảng xếp hạng Anime</span>
                         </a>
-                        <span class = "tooltip">Bảng xếp hạng Anime</span>
+                        <span class="tooltip">Bảng xếp hạng Anime</span>
                     </li>
-                    <!-- Managa -->
                     <li class="nav-list-item">
-                        <a href="#" class ="nav-link">
+                        <a href="#" class="nav-link">
                             <img src="https://img.icons8.com/ios-glyphs/30/book.png" alt="book"/>
                             <span>Manga</span>
                         </a>
-                        <span class = "tooltip">Manga</span>
+                        <span class="tooltip">Manga</span>
                     </li>
-                    <!-- Mô hình -->
                     <li class="nav-list-item">
-                        <a href="#" class ="nav-link">
+                        <a href="#" class="nav-link">
                             <img src="https://img.icons8.com/ios-filled/50/mobile-suit-gundam.png" alt="mobile-suit-gundam"/>
                             <span>Mô hình</span>
                         </a>
-                        <span class = "tooltip">Mô hình</span>
+                        <span class="tooltip">Mô hình</span>
                     </li>
-                    <!-- Trang phục Cosplay -->
                     <li class="nav-list-item">
-                        <a href="#" class ="nav-link">
+                        <a href="#" class="nav-link">
                             <img src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/66/external-Cosplay-geek-smashingstocks-glyph-smashing-stocks.png" alt="external-Cosplay-geek-smashingstocks-glyph-smashing-stocks"/>
                             <span>Trang phục Cosplay</span>
                         </a>
-                        <span class = "tooltip">Trang phục Cosplay</span>
+                        <span class="tooltip">Trang phục Cosplay</span>
                     </li>
                 </ul>
             </nav>
         </div>
 
-
-        <!-- HOME-CONTENT -->
-            <div class="home-content">
-                <div class="content">
-                    <div class="slide-show">
-                        <div class="list-pic">
-                            <div class="images-wrapper">
-                                <img src="img/2__1___1___1__93e4a132748647e6a3ff58b3fa64038a.webp">
-                                <img src="img/order.jpg">
-                            </div>
-                            <div class="btnLR">
-                                <i class="fa-solid fa-chevron-left"></i>
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </div>
+        <div class="home-content">
+            <div class="content">
+                <div class="slide-show">
+                    <div class="list-pic">
+                        <div class="images-wrapper">
+                            <img src="img/2__1___1___1__93e4a132748647e6a3ff58b3fa64038a.webp">
+                            <img src="img/order.jpg">
                         </div>
-                    </div>                    
+                        <div class="btnLR">
+                            <i class="fa-solid fa-chevron-left"></i>
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div> 
+
+                <!-- Danh sách truyện -->
+                <div class="book-list">
+                    <h1>Danh sách truyện</h1>
+                    <div class="book-items">
+                        <div class="book-item">
+                            <img src="img/product1.jpg" alt="Sản phẩm 1">
+                            <h2>Sản phẩm 1</h2>
+                            <p>Giá: 100,000 VNĐ</p>
+                            <button onclick="addToCart(1)">Thêm vào giỏ hàng</button>
+                        </div>
+                        <div class="book-item">
+                            <img src="img/product2.jpg" alt="Sản phẩm 2">
+                            <h2>Sản phẩm 2</h2>
+                            <p>Giá: 150,000 VNĐ</p>
+                            <button onclick="addToCart(2)">Thêm vào giỏ hàng</button>
+                        </div>
+                        <!-- Thêm các sản phẩm khác ở đây -->
+                    </div>
                 </div>
-
-
+            </div>
         </div>
     </main>
 
+    <div id="cart-popup" class="cart-popup">
+        <div class="cart-popup-content">
+            <span class="close-btn">&times;</span>
+            <h1>Giỏ hàng của bạn</h1>
+            <div class="cart-items"></div>
+            <div class="cart-summary">
+                <h2>Tổng tiền: <span id="total-price">0 VNĐ</span></h2>
+                <button class="checkout-btn" onclick="checkout()">Thanh toán</button>
+            </div>
+        </div>
+    </div>
 
-    <!-- Javascript -->
-    <script src="js/main.js" defer></script>
+    <footer>
+        <p>&copy; 2024 Wibu Dreamland. Tất cả quyền được bảo lưu.</p>
+    </footer>
+
+    <script>
+        // Giả lập dữ liệu sản phẩm
+        const products = [
+            { id: 1, name: "Sản phẩm 1", price: 100000, img: "img/product1.jpg" },
+            { id: 2, name: "Sản phẩm 2", price: 150000, img: "img/product2.jpg" },
+        ];
+        
+        let cartItems = [];
+
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            const existingItem = cartItems.find(item => item.id === productId);
+
+            if (existingItem) {
+                existingItem.quantity += 1; // Tăng số lượng nếu sản phẩm đã có
+            } else {
+                cartItems.push({ ...product, quantity: 1 }); // Thêm sản phẩm mới vào giỏ hàng
+            }
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartContainer = document.querySelector('.cart-items');
+            cartContainer.innerHTML = ''; // Xóa nội dung cũ
+
+            cartItems.forEach(item => {
+                const cartItem = document.createElement('div');
+                cartItem.classList.add('cart-item');
+                cartItem.innerHTML = `
+                    <img src="${item.img}" alt="${item.name}">
+                    <div class="item-details">
+                        <h2>${item.name}</h2>
+                        <p>Giá: ${item.price.toLocaleString()} VNĐ</p>
+                        <input type="number" value="${item.quantity}" min="1" class="item-quantity" onchange="updateQuantity(${item.id}, this.value)">
+                        <button class="remove-btn" onclick="removeFromCart(${item.id})">Xóa</button>
+                    </div>
+                `;
+                cartContainer.appendChild(cartItem);
+            });
+
+            const totalPriceElement = document.getElementById('total-price');
+            totalPriceElement.textContent = `${calculateTotal().toLocaleString()} VNĐ`;
+        }
+
+        function calculateTotal() {
+            return cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+        }
+
+        function removeFromCart(productId) {
+            cartItems = cartItems.filter(item => item.id !== productId); // Xóa sản phẩm
+            updateCartDisplay();
+        }
+
+        function updateQuantity(productId, quantity) {
+            const item = cartItems.find(item => item.id === productId);
+            if (item) {
+                item.quantity = parseInt(quantity);
+            }
+            updateCartDisplay();
+        }
+
+        function checkout() {
+            if (cartItems.length === 0) {
+                alert("Giỏ hàng rỗng. Vui lòng thêm sản phẩm trước khi thanh toán.");
+                return;
+            }
+            alert("Cảm ơn bạn đã thanh toán! Tổng tiền: " + calculateTotal().toLocaleString() + " VNĐ.");
+            cartItems = []; // Xóa giỏ hàng sau khi thanh toán
+            updateCartDisplay(); // Cập nhật hiển thị giỏ hàng
+        }
+
+        // Mở/Đóng popup giỏ hàng
+        document.querySelector('.cart-shop').onclick = function() {
+            document.getElementById('cart-popup').style.display = 'block'; // Hiện pop-up
+            updateCartDisplay(); // Cập nhật hiển thị giỏ hàng
+        };
+
+        document.querySelector('.close-btn').onclick = function() {
+            document.getElementById('cart-popup').style.display = 'none'; // Ẩn pop-up
+        };
+
+        window.onclick = function(event) {
+            if (event.target === document.getElementById('cart-popup')) {
+                document.getElementById('cart-popup').style.display = 'none'; // Ẩn pop-up
+            }
+        };
+    </script>
 </body>
 </html>
