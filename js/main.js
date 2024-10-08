@@ -42,7 +42,6 @@ function slideOpenClose(){
     const btnR =document.querySelector(".fa-chevron-right");
 
     btnR.addEventListener('click' , () =>{
-        clearInterval()
         showNextImage(1);
     })
     btnL.addEventListener('click',()=>{

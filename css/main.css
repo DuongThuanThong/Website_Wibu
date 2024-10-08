@@ -1,5 +1,5 @@
 *{
-    font-family: 'Nono Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     margin: 0;padding: 0;
     box-sizing: border-box;
     outline : none;border:none;
@@ -374,17 +374,18 @@ main .home-content .content {
     margin-inline: 8rem;
     height: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
 }
 
 main .home-content .content .slide-show{
     position: relative;
-    top: 0;
-    display: flex;
-    justify-content: center;
     top: 0.5rem;
     width: 105rem;  
     height: 50rem;
+    margin-bottom: 4rem;
 }
 
 main .home-content .content .slide-show .list-pic{
@@ -433,6 +434,16 @@ main .home-content .content .slide-show .list-pic .btnLR i{
 main .home-content .content .slide-show:hover .list-pic .btnLR i{
     display: inline;
     background-color: var(--focus-hover-color);
+}
+
+
+
+main .home-content .content .flash-sale-table-bg{
+    position: relative;
+    width: 105rem;
+    height: 30rem;
+    background-color: var(--header_color);
+    margin-top: 2.5rem;
 }
 
 
