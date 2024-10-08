@@ -347,6 +347,10 @@ main .main-nav.active .navbar .nav-list .nav-list-item:hover .tooltip {
 }
 
 /* Anime */
+.main-nav.active ~ Anime{
+  left: 20.1rem;
+  width: calc(100% - 20rem);
+}
 Anime {
   font-size: "Open Sans", sans-serif;
   font-size: 1rem;
