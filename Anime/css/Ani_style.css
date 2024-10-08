@@ -346,93 +346,18 @@ main .main-nav.active .navbar .nav-list .nav-list-item:hover .tooltip {
   opacity: 0;
 }
 
-/*MAIN*/
-
-/*Trang chủ*/
-.main-nav.active ~ .home-content {
-  left: 20.1rem;
-  width: calc(100% - 20rem);
-}
-
-main .home-content {
-  position: absolute;
-  left: 7.3rem;
-  width: calc(100% - 7rem);
-  height: 100%;
-  background-color: var(--bg_color);
-}
-
-main .home-content .content {
-  position: relative;
-  margin-inline: 8rem;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-main .home-content .content .slide-show {
-  position: relative;
-  top: 0;
-  display: flex;
-  justify-content: center;
-  top: 0.5rem;
-  width: 105rem;
-  height: 50rem;
-}
-
-main .home-content .content .slide-show .list-pic {
-  display: block;
-  width: 100%;
-  height: 106%;
-  border-radius: 1rem;
-  border: 2px solid black;
-  overflow: hidden;
-  position: relative;
-}
-
-main .home-content .content .slide-show .list-pic .images-wrapper {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  transition: 0.9s ease;
-}
-
-main .home-content .content .slide-show .list-pic .images-wrapper img {
-  width: 100%;
-  object-fit: cover;
-  transition: transform 1s ease;
-}
-
-main .home-content .content .slide-show .list-pic .btnLR {
-  display: flex;
-  position: absolute;
-  width: 100%;
-  top: 40%;
-  justify-content: space-between;
-  padding: 0.5rem;
-}
-
-main .home-content .content .slide-show .list-pic .btnLR i {
-  font-size: 4rem;
-  color: var(--yellow-color);
-  padding: 0.5rem;
-  display: none;
-  transition: 0.5s ease;
-  border-radius: 1rem;
-  border: 2px solid black;
-}
-
-main .home-content .content .slide-show:hover .list-pic .btnLR i {
-  display: inline;
-  background-color: var(--focus-hover-color);
-}
-
 /* Anime */
 Anime {
   font-size: "Open Sans", sans-serif;
   font-size: 1rem;
   line-height: 1.15;
   color: #111;
+  position: absolute;
+  left: 7.3rem;
+  width: calc(100% - 7rem);
+  height: 100%;
+  top: 5rem;
+  background-color: var(--bg_color);
 }
 
 Anime ul.Anime-hot {
@@ -441,13 +366,13 @@ Anime ul.Anime-hot {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-left: 9rem;
+  margin-left: 2rem;
   background-color: #fcb3b0;
   padding: 4rem;
   margin-top: 2rem;
   border-radius: 2rem;
   height: 38rem;
-  width: 91%;
+  width: 97%;
   overflow: hidden;
 }
 Anime ul.Anime-hot li {
