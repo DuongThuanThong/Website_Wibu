@@ -142,9 +142,6 @@
 
       <!-- Anime  -->
       <Anime>
-        <style>
-          @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap");
-        </style>
         <!-- Hot Anime  -->
         <ul class="Anime-hot">
           <span class="hot-logo">HOT</span>
@@ -206,8 +203,8 @@
         <!-- Anime random -->
         <link rel="stylesheet" href="/Anime/css/Ani_Rand.css" />
         <div id="propose">Đề xuất Anime</div>
-        <div class="slider-bg">
-          <div class="slide-1">
+        <div class="slider-bg" id="slider-1">
+          <div class="slider">
             <img
               src="/Anime/img/Mushoku_Tensei_Traler.png"
               alt="Image 1"
@@ -239,14 +236,12 @@
           </div>
         </div>
 
-        <br />
-
-        <div class="slider-bg">
-          <div class="slide-1">
+        <div class="slider-bg" id="slider-2" style="display: none;">
+          <div class="slider">
             <img
-            src="/Anime/img/Dandadan_Traler.jpg"
-            alt="Image 2"
-            class="slider-img"
+              src="/Anime/img/Dandadan_Traler.jpg"
+              alt="Image 2"
+              class="slider-img"
             />
             <div class="slider-info">
               <h3>Dandadan</h3>
@@ -258,9 +253,8 @@
               <p>Quốc gia: Nhật Bản</p>
               <p>
                 Giới thiệu: Momo Ayase là con gái của một dòng họ sở hữu linh
-                lực
-                còn Takakura Ken (biệt danh Okarun) là một otaku say mê về UFO
-                và người người hành tinh.<br />
+                lực còn Takakura Ken (biệt danh Okarun) là một otaku say mê về
+                UFO và người người hành tinh.<br />
                 Trong khi Momo là người tin vào ma quỷ nhưng phủ định người vũ
                 trụ còn Okarun thì ngược lại.<br />
                 Nên họ đã chia ra kiểm chứng điều mà mình không tin.<br />
@@ -273,6 +267,41 @@
             <div class="see-now"><a href="">Xem ngay</a></div>
           </div>
         </div>
+
+        <div class="slider-bg" id="slider-3" style="display: none;">
+          <div class="slider">
+            <img
+              src="/Anime/img/Arya_traler.jpg"
+              alt="Image 3"
+              class="slider-img"
+            />
+            <div class="slider-info">
+              <h3>Dandadan</h3>
+              <p>
+                Thể loại: Lãng mạn, Học đường, Hài
+              </p>
+              <p>Tác giả: Unknown</p>
+              <p>Quốc gia: Nhật Bản</p>
+              <p>
+                Giới thiệu:  Cô gái mang mái tóc bạch kim xinh
+                đẹp tuyệt trần khó có ai có thể sánh bằng ấy đang ngồi cạnh tôi,
+                Arya-san, nở một nụ cười đắc chí... nhưng, sự thật thì lại hoàn
+                toàn khác. Vừa xong, cô ấy đã nói “Tớ cũng muốn được cậu chú ý
+                nữa” bằng tiếng Nga! Thực ra, tôi, Kuze Masachika, sở hữu kỹ
+                năng đọc-nghe-hiểu tiếng Nga đạt đến mức thượng thừa ngang người
+                bản địa luôn rồi. Tôi không thể ngăn bản thân nở một nụ cười
+                thích thú trước một Arya-san đang không hề hay biết gì về điều
+                đó, người mà hôm nay, cũng đang nói ra những lời rất ngọt ngào
+                bằng tiếng Nga!? Đây là một câu truyện romcom tuổi trẻ với một
+                cô nàng JK người Nga siêu cao cấp, là đối tượng của sự ngưỡng mộ
+                của mọi học sinh trong trường!
+              </p>
+            </div>
+            <div class="see-now"><a href="">Xem ngay</a></div>
+          </div>
+        </div>
+
+        
       </Anime>
 
       <script src="/js/main.js" defer></script>

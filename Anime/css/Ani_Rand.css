@@ -21,7 +21,7 @@
   padding: 1rem;
 }
 
-.slider-bg .slide-1 .slider-img {
+.slider-bg .slider .slider-img {
   float: left;
   border-radius: 10px;
   width: 60rem;
@@ -29,7 +29,7 @@
   object-fit: cover;
 }
 
-.slider-bg .slide-1 .slider-info {
+.slider-bg .slider .slider-info {
   margin-top: 0.5rem;
   /* width: 4rem; */
   overflow: hidden;
@@ -41,7 +41,7 @@
 
 }
 
-.slider-bg .slide-1 .see-now{
+.slider-bg .slider .see-now{
   margin-top: 1rem;
   text-align: center;
   font-size: 2rem;
