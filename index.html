@@ -30,7 +30,7 @@
             </div>
         </div>
         <div class='user-bar'>
-            <div class="user" onclick='window.location.href="login.html"'>
+            <div class="user" onclick='window.location.href="login.html"' >
                 <div class='img-user'>
                     <i class="fa-solid fa-circle-user fa-flip-horizontal"></i>
                 </div>
@@ -43,7 +43,7 @@
                 <i class="fa-regular fa-heart"></i>
                 <span>Sản phẩm yêu thích</span>
             </div>
-            <div class='cart-shop'>
+            <div class='cart-shop' onclick="toggleCartPopup()">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span>Giỏ hàng</span>
             </div>
@@ -85,7 +85,7 @@
                     </li>
                     <li class="nav-list-item">
                         <a href="#" class="nav-link">
-                            <img src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/66/external-Cosplay-geek-smashingstocks-glyph-smashing-stocks.png" alt="external-Cosplay-geek-smashingstocks-glyph-smashing-stocks"/>
+                            <img src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/66/external-Cosplay-geek-smashingstocks-glyph-smashing-stocks.png" alt="external-Cosplay-geek-smashing-stocks"/>
                             <span>Trang phục Cosplay</span>
                         </a>
                         <span class="tooltip">Trang phục Cosplay</span>
@@ -132,9 +132,9 @@
         </div>
     </main>
 
-    <div id="cart-popup" class="cart-popup">
+    <div id="cart-popup" class="cart-popup" style="display:none;">
         <div class="cart-popup-content">
-            <span class="close-btn">&times;</span>
+            <span class="close-btn" onclick="toggleCartPopup()">&times;</span>
             <h1>Giỏ hàng của bạn</h1>
             <div class="cart-items"></div>
             <div class="cart-summary">
@@ -148,92 +148,6 @@
         <p>&copy; 2024 Wibu Dreamland. Tất cả quyền được bảo lưu.</p>
     </footer>
 
-    <script>
-        // Giả lập dữ liệu sản phẩm
-        const products = [
-            { id: 1, name: "Sản phẩm 1", price: 100000, img: "img/product1.jpg" },
-            { id: 2, name: "Sản phẩm 2", price: 150000, img: "img/product2.jpg" },
-        ];
-        
-        let cartItems = [];
-
-        function addToCart(productId) {
-            const product = products.find(p => p.id === productId);
-            const existingItem = cartItems.find(item => item.id === productId);
-
-            if (existingItem) {
-                existingItem.quantity += 1; // Tăng số lượng nếu sản phẩm đã có
-            } else {
-                cartItems.push({ ...product, quantity: 1 }); // Thêm sản phẩm mới vào giỏ hàng
-            }
-            updateCartDisplay();
-        }
-
-        function updateCartDisplay() {
-            const cartContainer = document.querySelector('.cart-items');
-            cartContainer.innerHTML = ''; // Xóa nội dung cũ
-
-            cartItems.forEach(item => {
-                const cartItem = document.createElement('div');
-                cartItem.classList.add('cart-item');
-                cartItem.innerHTML = `
-                    <img src="${item.img}" alt="${item.name}">
-                    <div class="item-details">
-                        <h2>${item.name}</h2>
-                        <p>Giá: ${item.price.toLocaleString()} VNĐ</p>
-                        <input type="number" value="${item.quantity}" min="1" class="item-quantity" onchange="updateQuantity(${item.id}, this.value)">
-                        <button class="remove-btn" onclick="removeFromCart(${item.id})">Xóa</button>
-                    </div>
-                `;
-                cartContainer.appendChild(cartItem);
-            });
-
-            const totalPriceElement = document.getElementById('total-price');
-            totalPriceElement.textContent = `${calculateTotal().toLocaleString()} VNĐ`;
-        }
-
-        function calculateTotal() {
-            return cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
-        }
-
-        function removeFromCart(productId) {
-            cartItems = cartItems.filter(item => item.id !== productId); // Xóa sản phẩm
-            updateCartDisplay();
-        }
-
-        function updateQuantity(productId, quantity) {
-            const item = cartItems.find(item => item.id === productId);
-            if (item) {
-                item.quantity = parseInt(quantity);
-            }
-            updateCartDisplay();
-        }
-
-        function checkout() {
-            if (cartItems.length === 0) {
-                alert("Giỏ hàng rỗng. Vui lòng thêm sản phẩm trước khi thanh toán.");
-                return;
-            }
-            alert("Cảm ơn bạn đã thanh toán! Tổng tiền: " + calculateTotal().toLocaleString() + " VNĐ.");
-            cartItems = []; // Xóa giỏ hàng sau khi thanh toán
-            updateCartDisplay(); // Cập nhật hiển thị giỏ hàng
-        }
-
-        // Mở/Đóng popup giỏ hàng
-        document.querySelector('.cart-shop').onclick = function() {
-            document.getElementById('cart-popup').style.display = 'block'; // Hiện pop-up
-            updateCartDisplay(); // Cập nhật hiển thị giỏ hàng
-        };
-
-        document.querySelector('.close-btn').onclick = function() {
-            document.getElementById('cart-popup').style.display = 'none'; // Ẩn pop-up
-        };
-
-        window.onclick = function(event) {
-            if (event.target === document.getElementById('cart-popup')) {
-                document.getElementById('cart-popup').style.display = 'none'; // Ẩn pop-up
-            }
-        };
-    </script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
