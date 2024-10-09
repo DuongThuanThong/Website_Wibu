@@ -17,6 +17,8 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+
+  padding: 1rem;
 }
 
 .slider-bg .slide-1 .slider-img {
@@ -31,11 +33,12 @@
   margin-top: 0.5rem;
   /* width: 4rem; */
   overflow: hidden;
-  padding: 2rem;
+  padding: 3rem;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 2rem;
   font-size: 1.7rem;
   height: 40rem;
+
 }
 
 .slider-bg .slide-1 .see-now{
