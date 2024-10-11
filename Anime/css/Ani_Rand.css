@@ -1,4 +1,4 @@
-#propose{
+.propose{
   font-size: 1.7rem;
   margin-left: 1rem;
 }
@@ -38,10 +38,9 @@
   border-radius: 2rem;
   font-size: 1.7rem;
   height: 40rem;
-
 }
 
-.slider-bg .slider .see-now{
+.slider-bg .slider .see-now {
   margin-top: 1rem;
   text-align: center;
   font-size: 2rem;
