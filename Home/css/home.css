@@ -4,11 +4,11 @@
     box-sizing: border-box;
     outline : none;border:none;
     text-decoration: none; text-transform: none;
-    transition: all .2s linear;
+    
 }
 :root{
     --bg_color: #f0f0f0;
-    --header_color: #fcb3b3;
+    --header_color: #fcb3b3;    
     --yellow-color:#f9a01b;
     --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
     --white-dark: #f0f0f0;
@@ -177,6 +177,7 @@ header .user-bar .img-user {
     height: 3.5rem;
     font-size: 3.5rem;
     cursor: pointer;
+    margin-bottom: 1rem;
 }
 
 header .user-bar .user-info span{
@@ -435,8 +436,7 @@ main .home-content .content .slide-show:hover .list-pic .btnLR i{
     display: inline;
     background-color: var(--focus-hover-color);
 }
-
-
+/* FLASH_SALE_TABLE */
 
 main .home-content .content .flash-sale-table-bg{
     position: relative;
@@ -444,12 +444,62 @@ main .home-content .content .flash-sale-table-bg{
     height: 30rem;
     background-color: var(--header_color);
     margin-top: 2.5rem;
+    padding: 1rem 3rem;
+    border-radius: .9rem;
+}
+
+main .home-content .content .flash-sale-table-bg .flash-sale-table{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+main .home-content .content .flash-sale-table-bg .flash-sale-table .head-flash-sale{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .home-content .content .flash-sale-table-bg .flash-sale-table .head-flash-sale .text{
+    display: flex;
+    text-decoration: underline;
+}
+
+main .home-content .content .flash-sale-table-bg .flash-sale-table .head-flash-sale .text span{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+main .home-content .content .flash-sale-table-bg .flash-sale-table .head-flash-sale .text img{
+    display: block;
+    width: 4rem;
+    height: 4rem;
+    padding-bottom: .4rem;
 }
 
 
 
+main .home-content .content .flash-sale-table-bg .flash-sale-table .count-time{
+    display: flex;
+    gap: .5rem;
+}
 
+main .home-content .content .flash-sale-table-bg .flash-sale-table .count-time .time-box{
+    display: flex;
+    background-color:white;
+    width: 4rem;
+    height: 4.5rem;
+    border-radius: .5rem;
+    flex-direction: column;
+    padding: 0.5rem;
+    text-align: center;
+    border:0.1rem solid black;
+}    
 
+main .home-content .content .flash-sale-table-bg .flash-sale-table .count-time .time-box strong{
+    font-size: 1.5rem;
+}
 
-
-
+main .home-content .content .flash-sale-table-bg .flash-sale-table .count-time .time-box small{
+    font-size: 1rem;
+}
