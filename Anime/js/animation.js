@@ -14,7 +14,7 @@ function showSlides() {
   slideIndex = (slideIndex + 1) % sliders.length; // sửa ở đây: tính toán chỉ số slider tiếp theo
 
   // Lặp lại quá trình này mỗi 1 giây (1000ms)
-  setTimeout(showSlides, 5000); // sửa ở đây: thiết lập thời gian cập nhật  300000
+  setTimeout(showSlides, 10000); // sửa ở đây: thiết lập thời gian cập nhật  300000
 }
 
 // Gọi hàm để bắt đầu slider tự động
