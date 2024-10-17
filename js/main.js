@@ -64,6 +64,8 @@ window.onload = function () {
 const products = [
     { id: 1, name: "Sản phẩm 1", price: 100000, img: "img/product1.jpg" },
     { id: 2, name: "Sản phẩm 2", price: 150000, img: "img/product2.jpg" },
+    { id: 3, name: "Sản phẩm 2", price: 150000, img: "img/product2.jpg" },
+    { id: 4, name: "Sản phẩm 2", price: 150000, img: "img/product2.jpg" },
 ];
 
 let cartItems = [];
