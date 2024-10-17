@@ -1,47 +1,21 @@
-let currentIndex = 0;
-let countdownTime = 5; // thời gian đếm ngược cho mỗi ảnh
-let slides = document.querySelectorAll(".slider-slide");
-let countdownElement = document.getElementById("countdown-timer");
-let interval;
+// JavaScript
 
-function showSlide(index) {
-  slides.forEach((slide, i) => {
-    slide.style.display = "none"; // Ẩn tất cả các slide
-    if (i === index) {
-      slide.style.display = "block"; // Hiển thị slide tương ứng
-    }
-  });
+let slideIndex = 0; // sửa ở đây: quản lý chỉ số slider
+const sliders = document.querySelectorAll(".slider-bg"); // sửa ở đây: lấy tất cả các slider
+
+function showSlides() {
+  // Ẩn tất cả các slider trước
+  sliders.forEach((slider) => (slider.style.display = "none")); // sửa ở đây: ẩn toàn bộ các slider
+
+  // Hiển thị slider hiện tại
+  sliders[slideIndex].style.display = "block"; // sửa ở đây: hiển thị slider hiện tại
+
+  // Tăng chỉ số slider, nếu đến cuối thì quay lại slider đầu tiên
+  slideIndex = (slideIndex + 1) % sliders.length; // sửa ở đây: tính toán chỉ số slider tiếp theo
+
+  // Lặp lại quá trình này mỗi 1 giây (1000ms)
+  setTimeout(showSlides, 5000); // sửa ở đây: thiết lập thời gian cập nhật  300000
 }
 
-function startCountdown() {
-  countdownElement.textContent = countdownTime;
-  clearInterval(interval);
-
-  interval = setInterval(() => {
-    countdownTime--;
-    countdownElement.textContent = countdownTime;
-    if (countdownTime <= 0) {
-      currentIndex = (currentIndex + 1) % slides.length;
-      showSlide(currentIndex); // Chuyển sang slide tiếp theo
-      countdownTime = 5; // Đặt lại thời gian đếm ngược cho slide tiếp theo
-    }
-  }, 1000);
-}
-
-document.querySelector(".prev").addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  showSlide(currentIndex);
-  startCountdown();
-});
-
-document.querySelector(".next").addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  showSlide(currentIndex);
-  startCountdown();
-});
-
-// Khi trang tải lên, slide đầu tiên sẽ được hiển thị và bắt đầu đếm ngược
-window.onload = () => {
-  showSlide(currentIndex);
-  startCountdown();
-};
+// Gọi hàm để bắt đầu slider tự động
+showSlides();
