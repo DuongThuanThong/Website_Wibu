@@ -347,6 +347,10 @@ main .main-nav.active .navbar .nav-list .nav-list-item:hover .tooltip {
 }
 
 /* Anime */
+.main-nav.active ~ Anime {
+  left: 20.1rem;
+  width: calc(100% - 20rem);
+}
 Anime {
   font-size: "Open Sans", sans-serif;
   font-size: 1rem;
@@ -371,8 +375,8 @@ Anime ul.Anime-hot {
   padding: 4rem;
   margin-top: 2rem;
   border-radius: 2rem;
-  height: 38rem;
-  width: 97%;
+  height: auto;
+  width: auto;
   overflow: hidden;
 }
 Anime ul.Anime-hot li {
@@ -434,9 +438,17 @@ Anime ul.Anime-hot .hot-logo {
   }
 }
 
-Anime ul.Anime-hot .see-more {
+Anime ul.Anime-hot .see-more a {
   position: absolute;
   top: 1rem;
   right: 2rem;
   font-size: 2rem;
+  color: violet;
+}
+
+Anime ul.Anime-hot .see-more_ a {
+  font-size: 2rem;
+  color: violet;
+  
+ 
 }

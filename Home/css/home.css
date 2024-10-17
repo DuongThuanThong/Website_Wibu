@@ -45,7 +45,7 @@ body {
 }
 
 
-/*Header*/
+/*----------------------------------------------------Header Thông ----------------------------------------------------------------*/
 
 header {
     position: fixed;
@@ -236,7 +236,7 @@ header .user-bar .cart-shop:hover {
 }
 
 
-/*Main*/
+/* -----------------------------------------------------------------------Main Thông-----------------------------------------------------*/
 
 main {
     width: 100%;
@@ -246,7 +246,7 @@ main {
 }
 
 
-/* Sidebar */
+/*------------------------------------------------------------------- Sidebar Thông -----------------------------------------------------------*/
 
 main .main-nav {
     position: fixed;
@@ -388,7 +388,7 @@ main .main-nav.active .navbar .nav-list .nav-list-item:hover .tooltip {
 /*MAIN*/
 
 
-/*Trang chủ*/
+/* ----------------------------------------------------------Trang chủ Thông -----------------------------------------------------------*/
 
 .main-nav.active~.home-content {
     left: 20.1rem;
@@ -576,7 +576,6 @@ main .home-content .content .slide-show .list-pic {
     flex-grow: .5;
 }
 
-
 .product-title h3 a {
     font-size: 1.2rem;
     margin-block: 0.5rem;
@@ -664,6 +663,36 @@ main .home-content .content .slide-show .list-pic {
     border: 0.20rem solid white;
  }
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*---------------------------------------------------------------------- FOOTER THỌ ------------------------------------------------------------------*/
  #footer-1 {
      background-color: var(--header_color);
      padding: 1.5rem 0;
@@ -709,8 +738,10 @@ main .home-content .content .slide-show .list-pic {
  
  #footer-2 {
      height: 65vh;
+
  }
  
+
  .imformation-1 {
      padding-top: 3.5rem;
      text-align: left;
