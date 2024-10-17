@@ -90,6 +90,12 @@ function count_Time_FS(){
     let a = setInterval(update_time_FS,1000);
 }    
 
+
+//- Nhấn vào trái tim trong flash-sale sẽ hiện trái tim màu đỏ
+
+
+
+
 window.onload = function() {
     siderOpenClose();
     slideOpenClose();

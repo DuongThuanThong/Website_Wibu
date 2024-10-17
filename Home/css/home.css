@@ -399,20 +399,20 @@ main .home-content .content .slide-show .list-pic{
     position: relative;
 }
 
-main .home-content .content .slide-show .list-pic .images-wrapper {
+.slide-show .list-pic .images-wrapper {
     display: flex;
     width: 100%;
     height: 100%;
     transition:  .9s ease;
 }
 
-main .home-content .content .slide-show .list-pic .images-wrapper img {
+.slide-show .list-pic .images-wrapper img {
     width: 100%;
     object-fit: cover;
     transition: transform 1s ease;
 }
 
-main .home-content .content .slide-show .list-pic .btnLR {
+ .slide-show .list-pic .btnLR {
     display: flex;
     position: absolute;
     width: 100%;
@@ -422,7 +422,7 @@ main .home-content .content .slide-show .list-pic .btnLR {
     
 }
 
-main .home-content .content .slide-show .list-pic .btnLR i{
+.content .slide-show .list-pic .btnLR i{
     font-size: 4rem;
     color: var(--yellow-color);
     padding: .5rem;
@@ -432,59 +432,63 @@ main .home-content .content .slide-show .list-pic .btnLR i{
     border: 2px solid black;
 }
 
-main .home-content .content .slide-show:hover .list-pic .btnLR i{
+.content .slide-show:hover .list-pic .btnLR i{
     display: inline;
     background-color: var(--focus-hover-color);
 }
 /* FLASH_SALE_TABLE */
 
-main .home-content .content .flash-sale-table-bg{
+.flash-sale-table-bg{
     position: relative;
     width: 105rem;
-    height: 30rem;
+    height: 43rem;
     background-color: var(--header_color);
     margin-top: 2.5rem;
     padding: 1rem 3rem;
     border-radius: .9rem;
 }
 
-main .home-content .content .flash-sale-table-bg .flash-sale-table{
+ .flash-sale-table{
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-main .home-content .content .flash-sale-table-bg .flash-sale-table .head-flash-sale{
+.head-flash-sale{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-inline: 2rem;
 }
 
-main .home-content .content .flash-sale-table-bg .flash-sale-table .head-flash-sale .text{
+.head-flash-sale .text{
     display: flex;
     text-decoration: underline;
 }
 
-main .home-content .content .flash-sale-table-bg .flash-sale-table .head-flash-sale .text span{
+.head-flash-sale .text span{
     font-size: 3rem;
     font-weight: bold;
 }
 
-main .home-content .content .flash-sale-table-bg .flash-sale-table .head-flash-sale .text img{
+.head-flash-sale .text img{
     display: block;
     width: 4rem;
     height: 4rem;
     padding-bottom: .4rem;
 }
 
+.head-flash-sale .name-website-flash-sale{
+    font-size: 2.5rem;
+    color: white;
+}
 
-
-main .home-content .content .flash-sale-table-bg .flash-sale-table .count-time{
+.head-flash-sale .count-time{
     display: flex;
     gap: .5rem;
 }
 
-main .home-content .content .flash-sale-table-bg .flash-sale-table .count-time .time-box{
+.head-flash-sale .count-time .time-box{
     display: flex;
     background-color:white;
     width: 4rem;
@@ -496,10 +500,135 @@ main .home-content .content .flash-sale-table-bg .flash-sale-table .count-time .
     border:0.1rem solid black;
 }    
 
-main .home-content .content .flash-sale-table-bg .flash-sale-table .count-time .time-box strong{
+.head-flash-sale .count-time .time-box strong{
     font-size: 1.5rem;
 }
 
-main .home-content .content .flash-sale-table-bg .flash-sale-table .count-time .time-box small{
+.head-flash-sale .count-time .time-box small{
     font-size: 1rem;
 }
+
+
+.body-flash-sale{
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 2rem;
+    padding-top: 1rem;
+}
+
+.body-flash-sale .product-card{
+    display: flex;
+    flex-direction: column;
+    width: 22rem;
+    height: 30rem;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    padding: 1rem 1rem;
+    position: relative;
+}
+
+.body-flash-sale .product-card .product-img {
+    height: 19rem;
+    width: 100%;
+}
+
+.body-flash-sale .product-card .product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: .5rem;
+}
+
+.body-flash-sale .product-card .product-content {
+    flex-grow: .5;
+}
+
+
+.product-title h3 a {
+    font-size: 1.2rem;
+    margin-block: 0.5rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; 
+    -webkit-box-orient: vertical;
+    height: 3rem; 
+    line-height: 1.5rem;
+    text-overflow: ellipsis;
+    color: #000;
+}
+
+
+.product-content .price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+
+.product-card .price .price-sale {
+    color: red;
+    font-weight: 600;
+}
+
+.product-card .price .price-not-sale {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.product-card .price .fa-heart {
+    scale:1.2;
+    margin-right: .5rem;
+}
+
+
+
+.product-card .progress-bar{
+    width: 100%;
+    height: .8rem;
+    border: 1px solid black;
+    border-radius: 999rem;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    background-color: #ef8282cf;
+}
+
+.product-card .progress-bar .percent{
+    position: absolute;
+    background-color: #ff0000;
+    top: 0;
+    z-index: 1;
+    border-radius: 999rem;
+    height: 100%;
+}
+
+
+.foot-flash-sale {
+    text-align: center;
+    margin-top: 1rem;
+    display: block;
+}
+
+.foot-flash-sale .btn-view-all {
+    display: inline-block;
+    text-align: center;
+    background-color: white;
+    padding: 1rem 5rem;
+    font-size: 1.2rem;
+    border-radius: .5rem;
+    border: 1px solid black;
+    transition: all .3s ;
+}
+
+
+.foot-flash-sale .btn-view-all:hover {
+   background-color: transparent;
+   color: white;
+   border: 2px solid white;
+}
+
+
+
+
+
