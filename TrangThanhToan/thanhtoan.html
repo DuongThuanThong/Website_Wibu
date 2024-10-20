@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GOOGLE FONT -->
+    <!-- Kiểu chữ Noto San, Paytone -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Paytone+One&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/eff669a9ab.js" crossorigin="anonymous"></script>
+    <!-- Css -->
+    <link rel="stylesheet" href="/TrangThanhToan/css/thanhtoan.css">
+    <title>Thanh Toán</title>
+</head>
+
+<body>
+    <!-- HEADER_WEBSITE -->
+    <header>
+        <!-- Logo of header -->
+        <div class='logo'>
+            <img src="img\logo_1.png" alt="">
+        </div>
+
+        <!-- Thanh tìm kiếm -->
+        <form action="" class="search-bar">
+            <input type="text" placeholder="Bạn đang tìm gì...?">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </form>
+        <!-- Thanh exp -->
+        <div class="exp-bar">
+            <span class="exp">  
+                EXP:
+                <span id="exp-value">0</span>
+            <span id="exp-value-max">/160</span>
+            </span>
+            <div class="progress">
+                <div id="exp-progress"></div>
+            </div>
+        </div>
+        <!-- Avatar, Tên, Lv, Giỏ hàng, Yêu thích -->
+        <div class='user-bar'>
+            <div class="user" onclick='window.location.href="login.html"'>
+                <div class='img-user'>
+                    <i class="fa-solid fa-circle-user fa-flip-horizontal"></i>
+                </div>
+
+                <div class="user-info">
+                    <span id="user-name">Đăng nhập/ Đăng kí</span>
+                    <span id="lv">Lv: 0</span>
+                </div>
+            </div>
+
+            <div class="favorite-heart">
+                <i class="fa-regular fa-heart"></i>
+                <span>Sản phẩm yêu thích</span>
+            </div>
+
+            <div class='cart-shop'>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Giỏ hàng</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN_WEBSITE -->
+    <main>
+
+        <!-- MENU-NAV -->
+        <div class="main-nav">
+            <nav class="navbar">
+                <!-- Trang chủ -->
+                <div class="menu-btn"><i class="fa-solid fa-bars" id="btn-sidebar"></i></div>
+                <ul class="nav-list">
+                    <li class="nav-list-item">
+                        <a href="/index.html" class="nav-link">
+                            <img src="https://img.icons8.com/fluency-systems-filled/50/home.png" alt="home" />
+                            <span class="link-text">Trang chủ</span>
+                        </a>
+                        <span class="tooltip">Trang chủ</span>
+                    </li>
+
+                    <!-- Anime -->
+                    <li class="nav-list-item">
+                        <a href="#" class="nav-link">
+                            <img src="https://img.icons8.com/ios-filled/50/doraemon.png" alt="doraemon" />
+                            <span>Bảng xếp hạng Anime</span>
+                        </a>
+                        <span class="tooltip">Bảng xếp hạng Anime</span>
+                    </li>
+                    <!-- Managa -->
+                    <li class="nav-list-item">
+                        <a href="#" class="nav-link">
+                            <img src="https://img.icons8.com/ios-glyphs/30/book.png" alt="book" />
+                            <span>Manga</span>
+                        </a>
+                        <span class="tooltip">Manga</span>
+                    </li>
+                    <!-- Mô hình -->
+                    <li class="nav-list-item">
+                        <a href="#" class="nav-link">
+                            <img src="https://img.icons8.com/ios-filled/50/mobile-suit-gundam.png" alt="mobile-suit-gundam" />
+                            <span>Mô hình</span>
+                        </a>
+                        <span class="tooltip">Mô hình</span>
+                    </li>
+                    <!-- Trang phục Cosplay -->
+                    <li class="nav-list-item">
+                        <a href="#" class="nav-link">
+                            <img src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/66/external-Cosplay-geek-smashingstocks-glyph-smashing-stocks.png" alt="external-Cosplay-geek-smashingstocks-glyph-smashing-stocks" />
+                            <span>Trang phục Cosplay</span>
+                        </a>
+                        <span class="tooltip">Trang phục Cosplay</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </main>
+
+    <!--Payments-Button-->
+    <div id="pay-header">
+        <!--Payments-Button-->
+        <div id="pay-header-1">
+            <div class="pay">
+                <div class="main-pay">
+                    <a href="/index.html" class="left-link"><i>Trở về Home</i></a>
+                    <a href="#" class="right-link"><i>Trở về giỏ hàng</i></a>
+                </div>
+            </div>
+        </div>
+    
+        <!--Payments-Imformation-->
+        <div id="pay-header-2">
+            <div class="pay-imformation">
+                <div class="pay-imform">
+                    <h2 style="font-size: 1.4rem; margin-left: 30px; margin-top: -25px;">Thông tin giao hàng *</h2>
+                    <input type="text" id="name" placeholder="Họ và tên">
+                    <input type="text" id="phone" placeholder="Số điện thoại">
+                </div>
+    
+                <div class="pay-address">
+                    <label for="address" style="font-size: 20px; color: gray; border-bottom: 1px dashed gray;">Địa chỉ *</label>
+                    <div class="pay-country">
+                        <input type="text" id="city" placeholder="Tỉnh/Thành">
+                        <input type="text" id="district" placeholder="Quận/Huyện">
+                        <input type="text" id="ward" placeholder="Phường/Xã">
+                        <div class="address-order">
+                            <input type="text" id="orther" placeholder="Địa chỉ cụ thể">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <!--Payments-Method-->
+            <div class="pay-method">
+                <h3 style="margin-left: 100px;margin-bottom: 40px; font-size: 1.3rem;">Phương thức thanh toán điện tử *</h3>
+                <div class="pay-option">
+                    <label for="momo">
+                        <input type="radio" name="payment" value="momo">
+                        <img src="/img/MoMo_Logo.png" alt="MoMo">
+                    </label>
+    
+                    <label for="vietcombank"> 
+                        <input type="radio" name="payment" value="vietcombank">
+                        <img src="/img/Vietcombank.jpg" alt="Vietcombank">
+                    </label>
+                </div>
+            </div>
+    
+            <!--Note Section-->
+            <div class="pay-note">
+                <div class="note-box">
+                    <h3>Lời nhắn:</h3>
+                    <textarea id="note" placeholder="Lưu ý cho Shop..."></textarea>
+                    <div class="character-count">0/200</div>
+                </div>
+            </div>
+        </div> 
+    </div> 
+    
+
+
+    <!--Product-->
+    <div class="product">
+        <div class="product-list">
+            <div class="product-items">
+                <img src="/img/mahiru1.webp" alt="Shiina Mahiru">
+                <div class="product-detail">
+                    <span class="product-title">Mahiru Shiina - The Angel Next Door Spoils Me Rotten</span> |
+                    <span class="product-subtitle">F:Nex 1/7 | FuRyu Figure</span> |
+                </div>
+                <div class="product-info">
+                    <span class="product-quantity">Số lượng: 1</span>
+                    <span class="product-price">1,000,000 đ</span>
+                </div>
+            </div>
+
+            <div class="product-items">
+                <img src="/img/mahitu2.jpg" alt="Shiina Mahiru">
+                <div class="product-detail">
+                    <span class="product-title">Mahiru Shiina - The Angel Next Door Spoils Me Rotten</span> |
+                    <span class="product-subtitle">F:Nex 1/7 | FuRyu Figure</span> |
+
+                </div>
+                <div class="product-info">
+                    <span class="product-quantity">Số lượng: 1</span>
+                    <span class="product-price">1,000,000 đ</span>
+                </div>
+            </div>
+
+            <div class="product-items">
+                <img src="/img/mahitu2.jpg" alt="Shiina Mahiru">
+                <div class="product-detail">
+                    <span class="product-title">Mahiru Shiina - The Angel Next Door Spoils Me Rotten</span> |
+                    <span class="product-subtitle">F:Nex 1/7 | FuRyu Figure</span> |
+                </div>
+                <div class="product-info">
+                    <span class="product-quantity">Số lượng: 1</span>
+                    <span class="product-price">1,000,000 đ</span>
+                </div>
+            </div>
+
+            <div class="product-items">
+                <img src="/img/mahiru1.webp" alt="Shiina Mahiru">
+                <div class="product-detail">
+                    <span class="product-title">Mahiru Shiina - The Angel Next Door Spoils Me Rotten</span> |
+                    <span class="product-subtitle">F:Nex 1/7 | FuRyu Figure</span> |
+                </div>
+                <div class="product-info">
+                    <span class="product-quantity">Số lượng: 1</span>
+                    <span class="product-price">1,000,000 đ</span>
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Voucher Section -->
+    <div class="voucher">
+        <select>
+            <option class="voucher-select">Chọn Voucher</option>
+            <option value="10%">Giảm 10%</option>
+            <option value="20%">Giảm 20%</option>
+            <option value="90%">Giảm 90%</option>
+        </select>
+        <button class="apply-button">Áp dụng</button>
+    </div>
+
+    <!-- Summary Section -->
+    <div class="summary">
+        <p>Tổng phí sản phẩm: <span class="product-total">4,000,000 đ</span></p>
+        <p>Phí vận chuyển: <span class="shipping-fee">50,000 đ</span></p>
+        <p>Chi phí giảm: <span class="discount-amount">50,000 đ</span></p>
+        <h3>
+            <span>Tổng:</span> 
+            <span class="grand-total">4,000,000 đ</span>
+        </h3>
+    </div>
+    <!-- Payment Button -->
+    <button class="payments-button">Đặt hàng</button>
+
+    <div id="footer"></div>
+
+
+    <!-- Javascript -->
+    <script src="/js/main.js" defer></script>
+
+    <script>
+        
+        const textarea = document.getElementById('note');
+        const charCount = document.querySelector('.character-count');
+
+        textarea.addEventListener('input', function () {
+            const currentLength = textarea.value.length;
+            charCount.textContent = `${currentLength}/200`;
+        });
+    </script>
+
+    <script>
+        const applyButton = document.querySelector('.apply-button');
+        const voucherSelect = document.querySelector('select');
+        const totalElement = document.querySelector('.grand-total');
+        const discountElement = document.querySelector('.discount-amount');
+        let total = 4050000; // Tổng số tiền ban đầu
+
+        applyButton.addEventListener('click', function () {
+            const selectedVoucher = voucherSelect.value;
+            let discount = 0;
+
+            // Xử lý tính chiết khấu theo mã voucher
+            if (selectedVoucher === '10%') {
+                discount = total * 0.1;
+            } else if (selectedVoucher === '20%') {
+                discount = total * 0.2;
+            } else if (selectedVoucher === '90%') {
+                discount = total * 0.9;
+            }
+
+            // Tính tổng mới và cập nhật giao diện
+            const newTotal = total - discount;
+            discountElement.textContent = discount.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+            totalElement.textContent = newTotal.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+
+            alert('Voucher đã được áp dụng!');
+        });
+
+        document.querySelector('.payments-button').addEventListener('click', function () {
+            alert('Đặt hàng thành công!');
+        });
+
+        
+        function updateTotal() {
+            const productItems = document.querySelectorAll('.product-items');
+            let total = 0;
+
+            productItems.forEach(item => {
+                const price = parseInt(item.getAttribute('data-price'));
+                const quantity = parseInt(item.querySelector('.product-qty').value);
+                total += price * quantity;
+            });
+
+            
+            const totalElement = document.querySelector('.grand-total');
+            totalElement.textContent = total.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+
+            
+            const productTotalElement = document.querySelector('.product-total');
+            productTotalElement.textContent = total.toLocaleString('vi-VN', { style: 'currency', currency: 'VND' });
+        }
+
+        
+        document.querySelectorAll('.product-qty').forEach(input => {
+            input.addEventListener('input', updateTotal);
+        });
+
+        updateTotal();
+
+    </script>
+
+    <footer></footer>
+</body>
+
+</html>
