@@ -1,3 +1,36 @@
+<?php 
+include '../components/connect.php';
+
+session_start();
+
+if(isset($_SESSION['user_id'])){
+    $user_id = $_SESSION['user_id'];
+}else{
+    $user_id = '';
+}
+
+if(isset($_POST['submit'])){
+
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $select_user = $conn->prepare("SELECT * FROM `user` WHERE user_email = ? AND user_password = ?");
+    $select_user->execute([$email,$password]);
+    $row = $select_user->fetch(PDO::FETCH_ASSOC);
+
+    if ($select_user->rowCount() > 0){
+        $_SESSION ["user_id"] = $row["user_id"];
+        header("Location: ../Home/index.php");
+        exit();
+    }else{
+        $message[]="Email đăng nhập hoặc mật khẩu không chính xác! ";
+        foreach($message as $msg){
+               echo '<div class="alert">' . $msg . '</div>';
+        }
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,10 +48,13 @@
     <title>Đăng kí</title>
 </head>
 <body>
+
+
+    
     <div class ="main-login">
         <div class="wrapper">
             <div class="login-box">
-                <form action="" method="">
+                <form action="" method="post">
                     <h2>Đăng nhập</h2>
                     <div class="input-box">
                         <i class="fa-solid fa-envelope"></i>
@@ -38,12 +74,12 @@
                     </div>
 
                     <div class ="button">
-                        <button type="submit">Đăng nhập</button>
+                        <button type="submit" name ="submit">Đăng nhập</button>
                     </div>
     
                     <div class="sign-link">
                         <span>Chưa có tài khoản?</span>
-                        <a href="registration.html">Đăng kí</a>
+                        <a href="registration.php">Đăng kí</a>
                     </div>
                 </form>
             </div>
@@ -53,6 +89,3 @@
 </body>
 </html>
 
-
-
-<!-- "file:///D:/anime picture/hahaha.png" -->
