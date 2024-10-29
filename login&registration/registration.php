@@ -29,16 +29,17 @@ if(isset($_POST['submit'])){
         $add_user = $conn->prepare("INSERT INTO`user` (user_name,user_email,user_password,user_phone) VALUES(?,?,?,?)");
         $add_user->execute([$username,$email, $password, $phone]);
         
-        $select_user = $conn->prepare("SELECT * FROM `user` WHERE user_email = ? AND user_password = ?");
-        $select_user->execute([$email,$password]);
-        $row = $select_user->fetch(PDO::FETCH_ASSOC);
-        if ($select_user->rowCount() >0){
-            $_SESSION ["user_id"] = $row["user_id"];
-            header("Location: ../Home/index.php");
-            exit();
+        $id_user= $conn ->lastInsertId();
+
+        $add_user_exp = $conn->prepare("INSERT INTO `user_exp` (id_user,lv_user) VALUES (?,?)");
+        $add_user_exp->execute([$id_user,0]);
+
+        
+        $_SESSION["user_id"]= $id_user;       
+        header("Location: ../Home/index.php");
+        exit();     
         }
-    }
-}
+    }   
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,4 +1,4 @@
-*{
+    *{
     font-family: 'Noto Sans', sans-serif;
     margin: 0;padding: 0;
     box-sizing: border-box;
@@ -112,5 +112,33 @@ html{
     text-decoration: underline;
 }
 
+.alert{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 10%; left: 50%;
+    transform: translate(-50%,50%);
+    font-size: 2rem;
+    background-color: #fcb3b3;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
 
+    animation: hidden-alert 5s forwards;
+}
+
+@keyframes hidden-alert{
+    0% {
+        opacity: 1; 
+        visibility: visible; 
+    }
+    70% {
+        opacity: 1; 
+    }
+    100% {
+        opacity: 0; 
+        visibility: hidden; 
+    }
+}
 

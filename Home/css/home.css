@@ -56,12 +56,11 @@
         height: 5.5rem;
         background-color: var(--header_color);
         box-shadow: var(--box-shadow);
-        z-index: 1000;
+        z-index: 100;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        overflow: hidden;
-        border: 0.5px solid black;
+        border-bottom: 0.5px solid black;
         padding-inline: 6rem;
     }
 
@@ -70,7 +69,7 @@
 
     header .logo {
         width: 100px;
-        max-height: 100%;
+        height: 100%;
         position: relative;
         align-items: center;
         display: flex;
@@ -119,6 +118,7 @@
         margin: .3rem;
         font-size: 2rem;
         cursor: pointer;
+        transition: .1s ease-in;
     }
 
     header .search-bar :focus {
@@ -127,9 +127,9 @@
     }
 
     header .search-bar .fa-magnifying-glass:hover {
-        color: white;
+        color:white;
+        background-color: var(--yellow-color);
     }
-
 
     /*Thanh EXP*/
 
@@ -163,14 +163,44 @@
     }
 
 
-    /*Căn chỉnh các phần của user-bar nằm căn giữa*/
-
+    
     header .user-bar {
         display: flex;
         align-items: center;
+        position: relative;
     }
 
+    .dropdown-menu {
+        display: none;
+    }
 
+    .dropdown-menu.show{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        background-color: white;
+        box-shadow: var(--box-shadow);
+        z-index: 999999;
+        width: 16rem;
+        margin-top: 1rem;
+        border-radius: 1rem;
+        border: .2rem solid var(--header_color);
+        overflow: hidden;
+    }
+    
+    .dropdown-menu a {
+        font-size: 1.4rem;
+        display: block;
+        padding: 1rem;
+        color: black;
+        background-color: white;
+    }
+    
+    .dropdown-menu a:hover {
+        background-color:var(--yellow-color);
+        color: white;
+    }
     /*AVtatar, Thông tin,LV*/
 
     header .user-bar .user {
@@ -179,6 +209,8 @@
         align-items: center;
         margin-right: 5rem;
         cursor: pointer;
+        position: relative;
+        width: 19rem;
     }
 
     header .user-bar .img-user {
@@ -187,7 +219,6 @@
         width: 3.5rem;
         height: 3.5rem;
         font-size: 3.5rem;
-        cursor: pointer;
         margin-bottom: 1rem;
     }
 
@@ -197,13 +228,15 @@
         align-items: flex-start;
         font-size: 1.2rem;
         margin-left: .5rem;
+        font-weight: 600;
     }
-
 
     /*Giỏ hàng, Yêu thích*/
 
     header .user-bar .favorite-heart,
-    .cart-shop {
+    header .user-bar .cart-shop {
+        width: 12rem; 
+        height: 4rem; 
         position: relative;
         font-size: 2.3rem;
         display: flex;
@@ -211,29 +244,39 @@
         justify-content: center;
         cursor: pointer;
         transition: all 0.2s ease;
-    }
-
-    header .user-bar .cart-shop {
-        width: 12rem;
-        height: 4rem;
         border-radius: 5px;
+    }
+    
+    /* Loại bỏ border cho .favorite-heart */
+    header .user-bar .favorite-heart, .user {
+        border: none;
+        transition: .5s;
+    }
+    
+    /* Vẫn giữ lại border cho .cart-shop */
+    header .user-bar .cart-shop {
         border: 2px solid black;
         margin-left: 5rem;
     }
-
+    
     header .user-bar .favorite-heart span,
-    .cart-shop span {
-        padding-left: 0.5rem;
+    header .user-bar .cart-shop span {
+        padding-left: .5rem;
         font-size: 1.3rem;
     }
-
-    header .user-bar .cart-shop:hover {
+    
+    header .user-bar .favorite-heart:hover,
+    header .user-bar .cart-shop:hover,
+    header .user-bar .user {
         color: white;
-        border: 2px solid white;
-        border-bottom: 4.5px solid white;
-        border-right: 3.5px solid white;
-        transform: translateX(-1rem);
+        background-color: var(--yellow-color);
+        transform: translateX(-0.5rem);
+        border: 2px solid black;
+        padding-inline: 1rem;
+        border-radius: 1rem;
+        font-weight: 600;
     }
+    
 
 
     /* -----------------------------------------------------------------------Main Thông-----------------------------------------------------*/
@@ -340,13 +383,16 @@
 
     main .main-nav .navbar .nav-list .nav-list-item:hover {
         background-color: var(--yellow-color);
-        border-radius: 30%;
+        border-radius: 25%;
+        border: .2rem solid black;
     }
 
     main .main-nav.active .navbar .nav-list .nav-list-item:hover {
         background-color: var(--yellow-color);
         border-radius: 1.5rem;
         margin-inline: 1rem;
+        border: .2rem solid black;
+        border-radius: 1rem;
     }
 
 
@@ -401,6 +447,7 @@
         width: calc(100% - 7rem);
         height: 100%;
         background-color: var(--bg_color);
+        z-index: 1;
     }
 
     main .home-content .content {
@@ -512,7 +559,11 @@
 
     .head-flash-sale .name-website-flash-sale{
         font-size: 2.5rem;
-        color: white;
+        color: var(--yellow-color);
+        text-shadow:    -1px -1px 0 #000,  
+                        1px -1px 0 #000,
+                        -1px  1px 0 #000,
+                        1px  1px 0 #000;;
     }
 
     .head-flash-sale .count-time{
