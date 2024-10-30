@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Calibri", sans-serif;
+}
+
+h4 {
+  font-size: 20px;
+  color: #dfe33a;
+}
+
+p {
+  font-size: 16px;
+  color: #000000;
+  margin: 15px 0 20px 0;
+}
+
+.section-p1 {
+  padding: 40px 80px;
+}
+
+body {
+  width: 100;
+}
+/* Banner */
+
+.slider-bg {
+  height: auto;
+  max-width: 90%;
+  margin: auto;
+  background-color: #f8d7da;
+  border-radius: 10px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slider-bg .slider .slider-img {
+  width: 100%;
+  height: 30rem;
+}
+
+/* Neo name */
+#Neo-Name {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+#Neo-Name .Neo-name-item {
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 2rem;
+  border: pink solid 2px;
+  color: hotpink;
+}
+
+#Neo-Name .Neo-name-item:hover {
+  background-color: #f8d7da;
+}
+
+/* --- */
+
+.section-p1 .Name-Cosplay {
+  width: 100%;
+  height: 4rem;
+}
+
+#products1 {
+  text-align: center;
+}
+
+#products1 .pro-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+
+#products1 .pro {
+  width: 23%;
+  min-height: 250px;
+  padding: 10px 12px;
+  border: 1px solid antiquewhite;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.2);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  position: relative;
+  display: inline-block;
+}
+
+#products1 .pro:hover {
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.6);
+}
+
+#products1 .pro .img-1 {
+  width: 100%;
+  border-radius: 20px;
+}
+#products1 .pro:hover .img-1 {
+  display: none;
+}
+
+#products1 .pro .img-2 {
+  width: 100%;
+  border-radius: 20px;
+  display: none;
+}
+#products1 .pro:hover .img-2 {
+  display: inline-block;
+}
+
+#products1 .pro .des {
+  text-align: start;
+  padding: 10px 0;
+}
+
+#products1 .pro .des span {
+  color: #606063;
+  font-size: 12px;
+}
+
+#products1 .pro .des h5 {
+  padding-top: 7px;
+  color: #1a1a1a;
+  font-size: 14px;
+}
+
+#products1 .pro .des i {
+  font-size: 12px;
+  color: rgb(243, 181, 25);
+}
+
+#products1 .pro .des h4 {
+  padding: top 7px;
+  font-size: 15px;
+  font-weight: 700;
+  color: violet;
+}
+
+#products1 .pro .cart {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: antiquewhite;
+  font-weight: 500;
+  color: hotpink;
+  border: 1px solid #fcb3b3;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+}
+
+#page-header {
+  background-image: url("img/banner/b1.jpg");
+  width: 100%;
+  height: 40vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 14px;
+}
+
+#page-header h2,
+#page-header p {
+  color: #ffffff;
+}
+
+#pagination {
+  text-align: center;
+}
+
+#pagination a {
+  text-decoration: none;
+  background-color: #088178;
+  padding: 15px 20px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 600;
+}
+
+#pagination a i {
+  font-size: 16px;
+  font-weight: 600;
+}

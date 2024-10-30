@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- GOOGLE FONT -->
+    <!-- Kiểu chữ Noto San, Paytone -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Paytone+One&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FONT AWESOME -->
+    <script
+      src="https://kit.fontawesome.com/eff669a9ab.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Css -->
+    <link rel="stylesheet" href="/Cosplay/css/style.css" />
+    <link rel="stylesheet" href="/Anime/css/Ani_style.css" />
+
+    <link rel="icon" href="/img/logo_1.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    /
+
+    <title>Wibu Dreamland</title>
+  </head>
+  <body>
+    <!-- HEADER_WEBSITE -->
+    <header>
+      <!-- Logo of header -->
+      <div class="logo">
+        <img src="/img/logo_1.png" alt="" />
+      </div>
+
+      <!-- Thanh tìm kiếm -->
+      <form action="" class="search-bar">
+        <input type="text" placeholder="Bạn đang tìm gì...?" />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </form>
+      <!-- Thanh exp -->
+      <div class="exp-bar">
+        <span class="exp">
+          EXP:
+          <span id="exp-value">0</span>
+          <span id="exp-value-max">/160</span>
+        </span>
+        <div class="progress">
+          <div id="exp-progress"></div>
+        </div>
+      </div>
+      <!-- Avatar, Tên, Lv, Giỏ hàng, Yêu thích -->
+      <div class="user-bar">
+        <div class="user" onclick='window.location.href="login.html"'>
+          <div class="img-user">
+            <i class="fa-solid fa-circle-user fa-flip-horizontal"></i>
+          </div>
+
+          <div class="user-info">
+            <span id="user-name">Đăng nhập/ Đăng kí</span>
+            <span id="lv">Lv: 0</span>
+          </div>
+        </div>
+
+        <div class="favorite-heart">
+          <i class="fa-regular fa-heart"></i>
+          <span>Sản phẩm yêu thích</span>
+        </div>
+
+        <div class="cart-shop">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span>Giỏ hàng</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN_WEBSITE -->
+    <main>
+      <!-- MENU-NAV -->
+      <div class="main-nav">
+        <nav class="navbar">
+          <!-- Trang chủ -->
+          <div class="menu-btn">
+            <i class="fa-solid fa-bars" id="btn-sidebar"></i>
+          </div>
+          <ul class="nav-list">
+            <li class="nav-list-item">
+              <a href="/index.html" class="nav-link">
+                <img
+                  src="https://img.icons8.com/fluency-systems-filled/50/home.png"
+                  alt="home"
+                />
+                <span class="link-text">Trang chủ</span>
+              </a>
+              <span class="tooltip">Trang chủ</span>
+            </li>
+
+            <!-- Anime -->
+            <li class="nav-list-item">
+              <a href="/Anime/Ani_index.html" class="nav-link">
+                <img
+                  src="https://img.icons8.com/ios-filled/50/doraemon.png"
+                  alt="doraemon"
+                />
+                <span>Bảng xếp hạng Anime</span>
+              </a>
+              <span class="tooltip">Bảng xếp hạng Anime</span>
+            </li>
+            <!-- Managa -->
+            <li class="nav-list-item">
+              <a href="#" class="nav-link">
+                <img
+                  src="https://img.icons8.com/ios-glyphs/30/book.png"
+                  alt="book"
+                />
+                <span>Manga</span>
+              </a>
+              <span class="tooltip">Manga</span>
+            </li>
+            <!-- Mô hình -->
+            <li class="nav-list-item">
+              <a href="#" class="nav-link">
+                <img
+                  src="https://img.icons8.com/ios-filled/50/mobile-suit-gundam.png"
+                  alt="mobile-suit-gundam"
+                />
+                <span>Mô hình</span>
+              </a>
+              <span class="tooltip">Mô hình</span>
+            </li>
+            <!-- Trang phục Cosplay -->
+            <li class="nav-list-item">
+              <a href="/Cosplay/Cos_index.html" class="nav-link">
+                <img
+                  src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/66/external-Cosplay-geek-smashingstocks-glyph-smashing-stocks.png"
+                  alt="external-Cosplay-geek-smashingstocks-glyph-smashing-stocks"
+                />
+                <span>Trang phục Cosplay</span>
+              </a>
+              <span class="tooltip">Trang phục Cosplay</span>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Cosplay  -->
+      <!-- Banner -->
+      <div class="slider-bg" id="slider-1">
+        <div class="slider">
+          <img
+            src="/Cosplay/img/banner/hero4.webp"
+            alt="Image 1"
+            class="slider-img"
+          />
+        </div>
+      </div>
+
+      <div class="slider-bg" id="slider-1">
+        <div class="slider">
+          <img
+            src="/Cosplay/img/banner/8058823f-03c6-4120-8f20-23f4e6926f29.__CR0,0,970,600_PT0_SX970_V1___.jpg"
+            alt="Image 1"
+            class="slider-img"
+          />
+        </div>
+      </div>
+
+      <!-- <div class="slider-bg" id="slider-1">
+        <div class="slider">
+          <img
+            src="/Cosplay/img/banner/cosplay-la-gi-cac-xu-huong-cosplay-dang-pho-bien-va-hot-nhat-hien-nay-26032024160619.webp"
+            alt="Image 1"
+            class="slider-img"
+          />
+        </div>
+      </div> -->
+
+      <div class="slider-bg" id="slider-1">
+        <div class="slider">
+          <img
+            src="/Cosplay/img/banner/cosplay-telannas-1.jpg"
+            alt="Image 1"
+            class="slider-img"
+          />
+        </div>
+      </div>
+
+      <!-- Cosplay Name -->
+
+      <div id="Neo-Name">
+        <a class="Neo-name-item" href="#genhin_">Genshin Impact</a>
+        <a class="Neo-name-item" href="#honkai_">Honkai</a>
+        <a class="Neo-name-item" href="#lienquan_">zenless zone zero</a>
+        <a class="Neo-name-item" href="#anime_">Anime</a>
+      </div>
+
+      <!-- Products -->
+
+      <section id="products1" class="section-p1">
+        <img
+          class="Name-Cosplay"
+          src="/Cosplay/img/NameCos/Geshin.png"
+          id="genshin_"
+        />
+        <div class="pro-container">
+          <div class="pro">
+            <img class="img-1" src="img/Products/Moiche1.webp" alt="" />
+            <img class="img-2" src="img/Products/Moiche2.webp" alt="" />
+
+            <div class="des">
+              <span>-28%</span>
+              <h5>Wanderer</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>721.000 VND</h4>
+            </div>
+            <a href="#">
+              <i class="fa fa-shopping-cart cart"></i>
+            </a>
+          </div>
+          <div class="pro">
+            <img class="img-1" src="img/Products/Kazuha1.webp" alt="" />
+            <img class="img-2" src="img/Products/kazuha2.jpg" alt="" />
+
+            <div class="des">
+              <span>-12%</span>
+              <h5>Kazuha</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>348.000 VND</h4>
+            </div>
+            <a class="add-cart cart1" href="#"
+              ><i class="fa fa-shopping-cart cart"></i>
+            </a>
+          </div>
+          <div class="pro">
+            <img class="img-1" src="img/Products/Klee1.webp" alt="" />
+            <img class="img-2" src="img/Products/kale2.webp" alt="" />
+
+            <div class="des">
+              <span>-20%</span>
+              <h5>Klee Giáng Sinh</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>923.000 VND</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i> </a>
+          </div>
+          <div class="pro">
+            <img class="img-1" src="img/Products/QiQi1.webp" alt="" />
+            <img class="img-2" src="img/Products/Qiqi2.webp" alt="" />
+
+            <div class="des">
+              <span>-30%</span>
+              <h5>QiQi</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>323.000 VND</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i> </a>
+          </div>
+          <div class="pro">
+            <img class="img-1" src="img/Products/Nahida1.webp" alt="" />
+            <img class="img-2" src="img/Products/Nahida2.webp" alt="" />
+
+            <div class="des">
+              <span>-32%</span>
+              <h5>Nahida</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>679.000 VND</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
+          </div>
+
+          <div class="pro">
+            <img class="img-1" src="img/Products/Fischl1.webp" alt="" />
+            <img class="img-2" src="img/Products/Fischl2.webp" alt="" />
+
+            <div class="des">
+              <span>-35%</span>
+              <h5>Fischl</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>192.000 VND</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
+          </div>
+
+          <div class="pro">
+            <img class="img-1" src="img/Products/venti1.webp" alt="" />
+            <img class="img-2" src="img/Products/venti2.webp" alt="" />
+
+            <div class="des">
+              <span>-40%</span>
+              <h5>Venti</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>629.000 VND</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i> </a>
+          </div>
+          <div class="pro">
+            <img class="img-1" src="img/Products/Ei1.jpg" alt="" />
+            <img class="img-2" src="img/Products/Ei2.webp" alt="" />
+
+            <div class="des">
+              <span>-5%</span>
+              <h5>Raiden Shogun</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>450.000 VND</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i> </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="products1" class="section-p1">
+        <img
+          class="Name-Cosplay"
+          src="/Cosplay/img/NameCos/honkai.png"
+          id="honkai_"
+        />
+        <div class="pro-container">
+          <div class="pro">
+            <img class="img-1" src="img/Products/Feixiao1.webp" alt="" />
+            <img class="img-2" src="img/Products/Feixiao2.webp" alt="" />
+
+            <div class="des">
+              <span>-13%</span>
+              <h5>Feixiao</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>385.000 VND</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i> </a>
+          </div>
+          <div class="pro">
+            <img class="img-1" src="img/Products/Dan_Heng1.webp" alt="" />
+            <img class="img-2" src="img/Products/Dan_Heng2.webp" alt="" />
+
+            <div class="des">
+              <span>-10%</span>
+              <h5>Dan Heng</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>385.000 VND</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i> </a>
+          </div>
+          <div class="pro">
+            <img class="img-1" src="img/Products/Kafka1.webp" alt="" />
+            <img class="img-2" src="img/Products/Kafka2.webp" alt="" />
+
+            <div class="des">
+              <span>-15%</span>
+              <h5>Kafka</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>1.742.000 VND</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i> </a>
+          </div>
+          <div class="pro">
+            <img class="img-1" src="img/Products/HuoHuo1.webp" alt="" />
+            <img class="img-2" src="img/Products/HuoHuo2.webp" alt="" />
+
+            <div class="des">
+              <span>-14%</span>
+              <h5>HuoHuo</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>514.000 VND</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i> </a>
+          </div>
+          <div class="pro">
+            <img class="img-1" src="img/Products/Robin1.jpg" alt="" />
+            <img class="img-2" src="img/Products/robin2.jpg" alt="" />
+
+            <div class="des">
+              <span>-17%</span>
+              <h5>Robin</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>630.000 VND</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i> </a>
+          </div>
+          <div class="pro">
+            <img class="img-1" src="img/Products/Marth_7th1.webp" alt="" />
+            <img class="img-2" src="img/Products/Marth_7th2.webp" alt="" />
+
+            <div class="des">
+              <span>-10%</span>
+              <h5>Marth 7th</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>412.000 VND</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i> </a>
+          </div>
+          <div class="pro">
+            <img class="img-1" src="img/Products/Blade1.webp" alt="" />
+            <img class="img-2" src="img/Products/Blade2.webp" alt="" />
+
+            <div class="des">
+              <span>-27%</span>
+              <h5>Blade</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>382.000 VND</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i> </a>
+          </div>
+          <div class="pro">
+            <img class="img-1" src="img/Products/Fu_Xuan1.webp" alt="" />
+            <img class="img-2" src="img/Products/Fu_Xuan2.webp" alt="" />
+
+            <div class="des">
+              <span>-45%</span>
+              <h5>Fu Xuan</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>416.000 VND</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i> </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="products1" class="section-p1">
+        <img
+          class="Name-Cosplay"
+          src="/Cosplay/img/NameCos/zzz.png"
+          id="lienquan_"
+        />
+        <div class="pro-container">
+          <div class="pro">
+            <img class="img-1" src="img/Products/Costume1.webp" alt="" />
+            <img class="img-2" src="img/Products/Costume2.webp" alt="" />
+
+            <div class="des">
+              <span>-15%</span>
+              <h5>Costume</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>334.000 VND</h4>
+            </div>
+            <a href="#">
+              <i class="fa fa-shopping-cart cart"></i>
+            </a>
+          </div>
+          <div class="pro">
+            <img class="img-1" src="img/Products/Anby_Demara1.webp" alt="" />
+            <img class="img-2" src="img/Products/Anby_Demara2.webp" alt="" />
+
+            <div class="des">
+              <span>-45%</span>
+              <h5>Anby Demara</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>270.000 VND</h4>
+            </div>
+            <a class="add-cart cart1" href="#"
+              ><i class="fa fa-shopping-cart cart"></i>
+            </a>
+          </div>
+          <div class="pro">
+            <img
+              class="img-1"
+              src="img/Products/AlexandrinaSebastiane1.webp"
+              alt=""
+            />
+            <img
+              class="img-2"
+              src="img/Products/Alexandrina_Sebastiane2.webp"
+              alt=""
+            />
+
+            <div class="des">
+              <span>-35%</span>
+              <h5>Alexandrina Sebastiane</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>340.000 VND</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i> </a>
+          </div>
+          <div class="pro">
+            <img class="img-1" src="img/Products/Belle1.webp" alt="" />
+            <img class="img-2" src="img/Products/Belle2.webp" alt="" />
+
+            <div class="des">
+              <span>-15%</span>
+              <h5>Belle</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>705.000 VND</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i> </a>
+          </div>
+          <div class="pro">
+            <img class="img-1" src="img/Products/Jane_Doe1.webp" alt="" />
+            <img class="img-2" src="img/Products/Jane_Doe2.webp" alt="" />
+
+            <div class="des">
+              <span>-5%</span>
+              <h5>Jane Doe</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>2.195.000 VND</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
+          </div>
+
+          <div class="pro">
+            <img class="img-1" src="img/Products/Zenless1.webp" alt="" />
+            <img class="img-2" src="img/Products/Zenless2.webp" alt="" />
+
+            <div class="des">
+              <span>-19%</span>
+              <h5>Zenless</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>365.000 VND</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
+          </div>
+
+          <div class="pro">
+            <img class="img-1" src="img/Products/Hoshimi_Miyabi1.jpg" alt="" />
+            <img class="img-2" src="img/Products/Hoshimi_Miyabi2.webp" alt="" />
+
+            <div class="des">
+              <span>-20%</span>
+              <h5>Hoshimi Miyabi</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>712.000 VND</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i> </a>
+          </div>
+          <div class="pro">
+            <img class="img-1" src="img/Products/Von_Lycaon1.webp" alt="" />
+            <img class="img-2" src="img/Products/Von_Lycaon2.webp" alt="" />
+
+            <div class="des">
+              <span>-27%</span>
+              <h5>Von Lycaon</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>1.180.000 VNG</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i> </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="products1" class="section-p1">
+        <img
+          class="Name-Cosplay"
+          src="/Cosplay/img/NameCos/Anime.png"
+          id="anime_"
+        />
+        <div class="pro-container">
+          <div class="pro">
+            <img class="img-1" src="img/Products/Costume1.webp" alt="" />
+            <img class="img-2" src="img/Products/Costume2.webp" alt="" />
+
+            <div class="des">
+              <span>Hot</span>
+              <h5>Costume</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>500 USD</h4>
+            </div>
+            <a href="#">
+              <i class="fa fa-shopping-cart cart"></i>
+            </a>
+          </div>
+          <div class="pro">
+            <img class="img-1" src="img/Products/Gawr_Gura1.webp" alt="" />
+            <img class="img-2" src="img/Products/Gawr_Gura2.webp" alt="" />
+
+            <div class="des">
+              <span>-15%</span>
+              <h5>Gawr Gura</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>320.000 VND</h4>
+            </div>
+            <a class="add-cart cart1" href="#"
+              ><i class="fa fa-shopping-cart cart"></i>
+            </a>
+          </div>
+          <div class="pro">
+            <img class="img-1" src="img/Products/Yuta_Okkotsu1.webp" alt="" />
+            <img class="img-2" src="img/Products/Yuta_Okkotsu2.webp" alt="" />
+
+            <div class="des">
+              <span>-27%</span>
+              <h5>Yuta Okkotsu</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>314.000 VND</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i> </a>
+          </div>
+          <div class="pro">
+            <img class="img-1" src="img/Products/f4.jpg" alt="" />
+            <img class="img-2" src="img/Products/emilia.webp" alt="" />
+
+            <div class="des">
+              <span>Hot</span>
+              <h5>Cosplay Costumes</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>500 USD</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i> </a>
+          </div>
+          <div class="pro">
+            <img class="img-1" src="img/Products/f5.jpg" alt="" />
+            <img class="img-2" src="img/Products/emilia.webp" alt="" />
+
+            <div class="des">
+              <span>Hot</span>
+              <h5>Cosplay Costumes</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>500 USD</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
+          </div>
+
+          <div class="pro">
+            <img class="img-1" src="img/Products/f6.webp" alt="" />
+            <img class="img-2" src="img/Products/emilia.webp" alt="" />
+
+            <div class="des">
+              <span>Hot</span>
+              <h5>Cosplay Costumes</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>500 USD</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i></a>
+          </div>
+
+          <div class="pro">
+            <img class="img-1" src="img/Products/f7.webp" alt="" />
+            <img class="img-2" src="img/Products/emilia.webp" alt="" />
+
+            <div class="des">
+              <span>Hot</span>
+              <h5>Cosplay Costumes</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>500 USD</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i> </a>
+          </div>
+          <div class="pro">
+            <img class="img-1" src="img/Products/f8.webp" alt="" />
+            <img class="img-2" src="img/Products/emilia.webp" alt="" />
+
+            <div class="des">
+              <span>Hot</span>
+              <h5>Cosplay Costumes</h5>
+              <div class="star">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <h4>500 USD</h4>
+            </div>
+            <a href="#"><i class="fa fa-shopping-cart cart"></i> </a>
+          </div>
+        </div>
+      </section>
+
+      <script src="/js/main.js" defer></script>
+      <script src="/Anime/js/animation.js" defer></script>
+    </main>
+  </body>
+</html>
