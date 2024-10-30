@@ -79,10 +79,10 @@
 
             </div>
             
-            <div class = "favorite-heart">
+            <a href="../YeuThich/YeuThich.html" class = "favorite-heart">
                 <i class="fa-regular fa-heart"></i>
                 <span>Sản phẩm yêu thích</span>
-            </div>
+            </a>
 
             <div class = 'cart-shop'>
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -90,3 +90,5 @@
             </div>
         </div>
     </header>
+
+    

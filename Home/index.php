@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,6 +11,8 @@
     <!-- FONT AWESOME -->
     <script src="https://kit.fontawesome.com/eff669a9ab.js" crossorigin="anonymous"></script>
     <!-- Css -->
+    <link rel="stylesheet" href="../components/css/global.css">
+    <link rel="stylesheet" href="../components/css/header&sidebar.css">
     <link rel="stylesheet" href="css/home.css">
     <title>Wibu Dreamland</title>
 </head>
@@ -19,7 +21,7 @@
       <?php include '../components/header.php'; ?>
       
       <!-- MAIN_WEBSITE -->
-      <main>
+    <main>
           <!-- Include Sidebar -->
         <?php include '../components/sidebar.php'; ?>
 
@@ -310,6 +312,8 @@
 
 
     <!-- Javascript -->
+    <script src="../components/js/global.js" defer></script>
     <script src="js/home.js" defer></script>
+    
 </body>
 </html>

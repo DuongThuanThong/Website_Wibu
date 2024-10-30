@@ -1,5 +1,5 @@
  <!-- MENU-NAV -->
- <div class="main-nav">
+        <div class="main-nav">
             <nav class="navbar">
                 <!-- Trang chủ -->
                 <div class="menu-btn"><i class="fa-solid fa-bars" id = "btn-sidebar"></i></div>
