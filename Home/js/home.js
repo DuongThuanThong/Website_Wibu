@@ -1,4 +1,11 @@
-
+//- Mở và đóng dropdown
+function dropdownOpenClose(){
+    let activebtn = document.querySelector('.user');
+    let dropdown = document.querySelector('.dropdown-menu')
+    activebtn.onclick = function(){
+        dropdown.classList.toggle('show');
+    }
+}
 
 //-Mở và đóng sidebar ở phần main (Menu)
 function siderOpenClose(){
@@ -91,13 +98,12 @@ function count_Time_FS(){
 }    
 
 
-//- Nhấn vào trái tim trong flash-sale sẽ hiện trái tim màu đỏ
-
-
+//- Nhấn vào trái tim trong flash-sale sẽ hiện trái tim màu 
 
 
 window.onload = function() {
     siderOpenClose();
     slideOpenClose();
     count_Time_FS();
+    dropdownOpenClose();
 };

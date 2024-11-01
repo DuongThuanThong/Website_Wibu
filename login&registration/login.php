@@ -27,7 +27,7 @@ if(isset($_POST['submit'])){
         foreach($message as $msg){
                echo '<div class="alert">' . $msg . '</div>';
         }
-    }
+    }     
 }
 
 ?>

@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- GOOGLE FONT -->
-    <!-- Kiểu chữ Noto San, Paytone -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Paytone+One&display=swap"
-      rel="stylesheet"
-    />
+        <!-- Kiểu chữ Noto San, Paytone -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Paytone+One&display=swap" rel="stylesheet">
     <!-- FONT AWESOME -->
-    <script
-      src="https://kit.fontawesome.com/eff669a9ab.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/eff669a9ab.js" crossorigin="anonymous"></script>
     <!-- Css -->
-    <link rel="stylesheet" href="/Anime/css/Ani_style.css" />
-    <link rel="icon" href="/img/logo_1.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../Home/css/home.css">
+    <link rel="stylesheet" href="../Anime/css/Ani_Rand.css">
+    <link rel="stylesheet" href="../Anime/css/Ani_style.css">
     <title>Wibu Dreamland</title>
-  </head>
-  <body>
-    <?php include '../components/header.php'; ?>
-    <!-- MAIN_WEBSITE -->
-    <main>
-          <?php include '../components/sidebar.php'; ?>
+</head>
+<body>
+      <!-- Include Header -->
+      <?php include '../components/header.php'; ?>
+      
+      <!-- MAIN_WEBSITE -->
+      <main>
+          <!-- Include Sidebar -->
+        <?php include '../components/sidebar.php'; ?>
       <!-- Anime  -->
           <Anime>
             <!-- Hot Anime  -->
@@ -117,7 +115,6 @@
 
             <br />
             <!-- Anime random -->
-            <link rel="stylesheet" href="/Anime/css/Ani_Rand.css" />
             <div class="propose">Đề xuất Anime</div>
             <div class="slider-bg" id="slider-1">
               <div class="slider">
@@ -497,7 +494,7 @@
                 </div>
                 <div class="anime-name">
                   <a href="https://animevietsub.tube/anime-sap-chieu/"
-                    >TDược Sư Tự Sự Mùa 2</a
+                    >Dược Sư Tự Sự Mùa 2</a
                   >
                 </div>
               </li>
