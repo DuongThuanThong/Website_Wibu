@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GOOGLE FONT -->
+    <!-- Kiểu chữ Noto San, Paytone -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Paytone+One&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/eff669a9ab.js" crossorigin="anonymous"></script>
+    <!-- Css -->
+    <link rel="stylesheet" href="/Pro-sale/Pro-Sale.css">
+    <title>Products</title>
+</head>
+
+<body>
+    <!-- HEADER_WEBSITE -->
+    <header>
+        <!-- Logo of header -->
+        <div class='logo'>
+            <img src="img\logo_1.png" alt="">
+        </div>
+        </div>
+
+        <!-- Thanh tìm kiếm -->
+        <form action="" class="search-bar">
+            <input type="text" placeholder="Bạn đang tìm gì...?">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </form>
+        <!-- Thanh exp -->
+        <div class="exp-bar">
+            <span class="exp">  
+                EXP:
+                <span id="exp-value">0</span>
+            <span id="exp-value-max">/160</span>
+            </span>
+            <div class="progress">
+                <div id="exp-progress"></div>
+            </div>
+        </div>
+        <!-- Avatar, Tên, Lv, Giỏ hàng, Yêu thích -->
+        <div class='user-bar'>
+            <div class="user" onclick='window.location.href="login.html"'>
+                <div class='img-user'>
+                    <i class="fa-solid fa-circle-user fa-flip-horizontal"></i>
+                </div>
+
+                <div class="user-info">
+                    <span id="user-name">Đăng nhập/ Đăng kí</span>
+                    <span id="lv">Lv: 0</span>
+                </div>
+            </div>
+
+            <div class="favorite-heart">
+                <i class="fa-regular fa-heart"></i>
+                <span>Sản phẩm yêu thích</span>
+            </div>
+
+            <div class='cart-shop'>
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Giỏ hàng</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN_WEBSITE -->
+    <main>
+
+        <!-- MENU-NAV -->
+        <div class="main-nav">
+            <nav class="navbar">
+                <!-- Trang chủ -->
+                <div class="menu-btn"><i class="fa-solid fa-bars" id="btn-sidebar"></i></div>
+                <ul class="nav-list">
+                    <li class="nav-list-item">
+                        <a href="index.html" class="nav-link">
+                            <img src="https://img.icons8.com/fluency-systems-filled/50/home.png" alt="home" />
+                            <span class="link-text">Trang chủ</span>
+                        </a>
+                        <span class="tooltip">Trang chủ</span>
+                    </li>
+
+                    <!-- Anime -->
+                    <li class="nav-list-item">
+                        <a href="#" class="nav-link">
+                            <img src="https://img.icons8.com/ios-filled/50/doraemon.png" alt="doraemon" />
+                            <span>Bảng xếp hạng Anime</span>
+                        </a>
+                        <span class="tooltip">Bảng xếp hạng Anime</span>
+                    </li>
+                    <!-- Managa -->
+                    <li class="nav-list-item">
+                        <a href="#" class="nav-link">
+                            <img src="https://img.icons8.com/ios-glyphs/30/book.png" alt="book" />
+                            <span>Manga</span>
+                        </a>
+                        <span class="tooltip">Manga</span>
+                    </li>
+                    <!-- Mô hình -->
+                    <li class="nav-list-item">
+                        <a href="#" class="nav-link">
+                            <img src="https://img.icons8.com/ios-filled/50/mobile-suit-gundam.png" alt="mobile-suit-gundam" />
+                            <span>Mô hình</span>
+                        </a>
+                        <span class="tooltip">Mô hình</span>
+                    </li>
+                    <!-- Trang phục Cosplay -->
+                    <li class="nav-list-item">
+                        <a href="#" class="nav-link">
+                            <img src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/66/external-Cosplay-geek-smashingstocks-glyph-smashing-stocks.png" alt="external-Cosplay-geek-smashingstocks-glyph-smashing-stocks" />
+                            <span>Trang phục Cosplay</span>
+                        </a>
+                        <span class="tooltip">Trang phục Cosplay</span>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+    </main>
+
+
+    <!--Pro-Sale-->
+    <!-- Modal Popup for Full-size Image -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+    </div>
+
+    <div class="Pro-container">
+        <div class="Pro-img">
+            <button class="prev" onclick="prevImage()">❮</button>
+            <img src="/Pro-sale/img/Mai-1.webp" alt="mai" class="main-img" id="main-image" onclick="openModal(this.src)">
+            <button class="next" onclick="nextImage()">❯</button>
+            <div class="Pro-img-thumb">
+                <img src="/Pro-sale/img/Mai-1.webp" alt="img-1" onclick="changeImage(0)">
+                <img src="/Pro-sale/img/Mai-2.webp" alt="img-2" onclick="changeImage(1)">
+                <img src="/Pro-sale/img/Mai-3.jpg" alt="img-3" onclick="changeImage(2)">
+                <img src="/Pro-sale/img/Mai-4.webp" alt="img-4" onclick="changeImage(3)">
+                <img src="/Pro-sale/img/Mai-5.webp" alt="img-5" onclick="changeImage(4)">
+            </div>
+        </div>
+        
+        
+
+        <div class="Pro-details">
+            <div class="font"> 
+                <p>
+                    Sakurajima Mai Bunny Girl Ver. Artist MasterPiece AMP+ - Bunny Girl Senpai | TAITO Figure
+                    
+                </p> 
+            </div>
+            
+            
+
+            <div class="font-color">
+                <p>Hàng sẵn ship ngay</p>
+            </div> 
+            <p>Thương hiệu: <span class="made">Taito</span> | Loại: <span class="made">Game Prize</span> |</p>
+            <p>MSP: <span class="made">251073701451800700</span> 
+                <a href="/" class="favorite">
+                    <i class="fa-regular fa-heart"></i>
+                </a>
+            </p>
+
+            <div class="price">
+                <span class="current-price">450,000₫</span>
+                <span class="old-price">690,000₫</span>
+            </div>
+
+            <div class="time-container">
+                <div class="time-header">
+                    <p>KẾT THÚC TRONG:</p>
+                    <div class="timer">
+                        <div class="time-block">
+                            <span id="days">00</span>
+                            <span>Ngày</span>
+                        </div>
+                        <div class="time-block">
+                            <span id="hours">00</span>
+                            <span>Giờ</span>
+                        </div>
+                        <div class="time-block">
+                            <span id="minutes">00</span>
+                            <span>Phút</span>
+                        </div>
+                        <div class="time-block">
+                            <span id="seconds">00</span>
+                            <span>Giây</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sales-info">
+                    <span>🔥 Đã bán <strong>14</strong> sản phẩm</span>
+                    <div class="sales">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="btn-enter">
+                <div class="title">Tiêu đề: <span id="title-text"><b></b></span></div>
+                <button class="btn-success" onclick="updateTitle()">Thanh toán toàn bộ</button>
+            </div>
+
+            <div class="counter">
+                <button onclick="decrease()">-</button>
+                <span id="counterValue">1</span>
+                <button onclick="increase()">+</button>
+            </div>
+
+            <div class="shop-cart">
+                <a href="/" class="shop-link">
+                    <p class="s-p">THÊM VÀO GIỎ</p>
+                    <p class="s-q">Vui lòng đọc kĩ ngày phát hành</p>
+                </a>
+            </div>
+
+            <div class="other">
+                <p class="o-t">Xem thêm:</p>
+                <div class="other-1">
+                    <a href="/" class="other-a">Sakurajima Mai</a> 
+                </div>
+
+                <div class="other-2">
+                    <a href="/" class="other-a">Seishun Buta Yarou wa Odekake Sister no Yume o Minai</a> 
+                </div>
+
+                <div class="other-3">
+                    <a href="/" class="other-a">Phát hành 2023/05 </a> 
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <!--Cam Ket-->
+    <div class="commit-box">
+        <div class="commit">
+            <div class="commit-header">Cam kết bán hàng</div>
+            <ul class="commit-list">
+                <li>
+                    <img src="/Pro-sale/img/original.webp" alt="Icon 1">
+                    <a href="/" class="link-origin">Bảo Đảm Giá Đặt Trước</a>
+                </li>
+                <li>
+                    <img src="/Pro-sale/img/hand.webp" alt="Icon 2">
+                    <span>Hàng chính hãng, bảo hành lỗi NSX</span>
+                </li>
+                <li>
+                    <img src="/Pro-sale/img/box.webp" alt="Icon 3">
+                    <span>FREE SHIPPING toàn quốc đơn hàng trên 400K</span>
+                </li>
+                <li>
+                    <img src="/Pro-sale/img/world.webp" alt="Icon 4">
+                    <span>International Shipping now available!</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="notice-box">
+            <div class="notice-header">Lưu ý khi mua hàng</div>
+            <ul class="notice-list">
+                <li>
+                    <i class="fa-regular fa-circle-check"></i>
+                    <span>Khách đọc kỹ ngày phát hành (dự kiến) của sản phẩm</span>
+                </li>
+                <li>
+                    <i class="fa-regular fa-circle-check"></i>
+                    <span>Hàng đặt trước giá có thể thay đổi, khách hãy inbox để xác nhận giá trước khi đặt mua</span>
+                </li>
+                <li>
+                    <i class="fa-regular fa-circle-check"></i>
+                    <span>Mỗi nguồn hàng có chính sách bảo hành khác nhau, tham khảo <a href="#">tại đây</a></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <div class="des-pro">
+        <h2 class="section-title">MÔ TẢ SẢN PHẨM</h2>
+        <h3 class="pro-title">
+            Mô hình figure chính hãng <b>Sakurajima Mai Bunny Ver. Seishun Buta Yarou wa Odekake Sister no Yume o Minai | Taito</b>
+        </h3>
+        
+        <div class="product-des short" id="product-des">
+            <p>Mô hình <b>Sakurajima Mai</b> phiên bản <b>Bunny</b> thuộc dòng <b>Artist MasterPiece+</b> từ series <b>Seishun Buta Yarou wa Odekake Sister no Yume o Minai</b>, do <b>Taito</b> sản xuất, là một sản phẩm tuyệt vời cho các fan của anime nổi tiếng này. Được làm từ chất liệu ABS và PVC, mô hình này không chỉ có độ bền cao mà còn thể hiện xuất sắc từng chi tiết nhỏ nhất của nhân vật.</p>
+            <p>Với chiều cao khoảng 150mm (5.85 in), mô hình <b>Sakurajima Mai</b> phiên bản <b>Bunny</b> nổi bật với thiết kế đầy quyến rũ và tinh tế, từ trang phục thỏ đặc trưng đến những chi tiết nhỏ nhất như biểu cảm gương mặt và phụ kiện đi kèm. Sản phẩm được phát hành vào ngày 27 tháng 5 năm 2023 tại Nhật Bản dưới dạng giải thưởng, tạo nên đồ sưu tầm độc đáo cho các fan hâm mộ.</p>
+            <p>Đóng gói kỹ lưỡng trong hộp, mô hình được bảo vệ cẩn thận để đảm bảo sản phẩm đến tay bạn trong tình trạng hoàn hảo. Đây chắc chắn là một sự bổ sung tuyệt vời cho bất kỳ bộ sưu tập nào của fan <b>Seishun Buta Yarou</b>.</p>
+            <a href="#" class="link">Hỗ trợ ship quốc tế</a> | <a href="#" class="link">Chính sách đổi trả</a> | <a href="#" class="link">Câu hỏi FAQ</a>
+            <p>The <b>Sakurajima Mai Bunny Ver</b>. figure from the <b>Artist MasterPiece+</b> line, part of the <b>Seishun Buta Yarou wa Odekake Sister no Yume o Minai</b> series, produced by <b>Taito</b>, is a fantastic product for fans of this popular anime. Made of ABS and PVC materials, this figure is not only highly durable but also excellently reproduces the character's intricate details.</p>
+            <p>Standing approximately 150mm (5.85 in) tall, the <b>Bunny Ver</b>. of <b>Sakurajima Mai</b> features a captivating and intricate design, from the iconic bunny outfit to the smallest details like facial expression and accessories. Released on May 27, 2023, in Japan as a prize, it offers fans a unique collectible piece.</p>
+            <p>Carefully packed in a box, the figure is well-protected to ensure it arrives in perfect condition. This is certainly a wonderful addition to any <b>Seishun Buta Yarou</b> fan's collection.</p>
+            <a href="#" class="link">International Shipping Support</a> | <a href="#" class="link">Return Policy</a> | <a href="#" class="link">FAQ</a>
+        </div>
+
+        <button class="toggle-btn" onclick="toggleDescription()" id="toggle-btn">Xem thêm</button>
+    </div>
+
+
+    <div class="pro-inform">
+        <h3>Thông tin sản phẩm</h3>
+        <table class="inform-table lenght">
+            <tr>
+                <th>Tên sản phẩm</th>
+                <td>Artist MasterPiece+ Sakurajima Mai Bunny Ver.</td>
+            </tr>
+            <tr>
+                <th>Series (anime)</th>
+                <td>Seishun Buta Yarou wa Odekake Sister no Yume o Minai</td>
+            </tr>
+            <tr><th>Thương hiệu</th><td>Taito</td></tr>
+            <tr><th>Ngày phát hành</th><td>05/2023</td></tr>
+            <tr><th>Giá hãng đề xuất</th><td></td></tr>
+            <tr><th>JAN code</th><td></td></tr>
+            <tr class="extra-inform"><th>Đặc điểm</th><td>ABS, PVC, Prepainted, H=150mm (5.85in)</td></tr>
+            <tr class="extra-inform"><th>Mã tại chỉ</th><td>Vui lòng liên hệ để biết thêm</td></tr>
+        </table>
+        <button id="toggleBtn" onclick="toggleInfo()">+ Xem thêm</button>
+    </div>
+
+    <!-- Javascript -->
+    <script src="/Pro-sale/Pro-Sale.js" defer></script>
+    
+    
+</body>
+
+</html>
