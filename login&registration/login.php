@@ -1,25 +1,17 @@
 <?php 
 include '../components/connect.php';
 
-session_start();
 
-if(isset($_SESSION['user_id'])){
-    $user_id = $_SESSION['user_id'];
-}else{
-    $user_id = '';
-}
 
 if(isset($_POST['submit'])){
-
+    
     $email = $_POST['email'];
     $password = $_POST['password'];
-
-    $select_user = $conn->prepare("SELECT * FROM `user` WHERE user_email = ? AND user_password = ?");
-    $select_user->execute([$email,$password]);
-    $row = $select_user->fetch(PDO::FETCH_ASSOC);
-
-    if ($select_user->rowCount() > 0){
-        $_SESSION ["user_id"] = $row["user_id"];
+    
+    $select_user = mysqli_query($conn,"SELECT * FROM `users` WHERE EmailUser = '$email' AND PasswordUser = '$password'");
+    if (mysqli_num_rows( $select_user ) > 0){
+        $row = mysqli_fetch_array($select_user);
+        $_SESSION ["user_id"] = $row["IdUser"];
         header("Location: ../Home/index.php");
         exit();
     }else{
@@ -29,6 +21,7 @@ if(isset($_POST['submit'])){
         }
     }     
 }
+
 
 ?>
 <!DOCTYPE html>
@@ -49,12 +42,11 @@ if(isset($_POST['submit'])){
 </head>
 <body>
 
-
     
     <div class ="main-login">
         <div class="wrapper">
             <div class="login-box">
-                <form action="" method="post">
+                <form action="" method="POST">
                     <h2>Đăng nhập</h2>
                     <div class="input-box">
                         <i class="fa-solid fa-envelope"></i>

@@ -1,36 +1,33 @@
 <?php
     include ("../components/connect.php");
-    session_start();
+    
     if (isset($_SESSION['user_id'])){
         $user_id = $_SESSION['user_id'];
 
-        $select_user = $conn->prepare('SELECT user_name FROM `user` WHERE user_id = ?');
-        $select_user->execute([$user_id]);
-
-        $user_info = $select_user->fetch(PDO::FETCH_ASSOC);
-
-        
-        $user_name = $user_info['user_name'];
+        $select_user = mysqli_query($conn,"SELECT * FROM users WHERE IdUser = '$user_id'");
+        $user_info = mysqli_fetch_array($select_user);
+        $user_name = $user_info['NameUser'];
         
 
-        $select_lv = $conn->prepare('SELECT lv_user FROM `user_exp` WHERE id_user =?');
-        $select_lv->execute([$user_id]);   
-        $lv = $select_lv->fetch(PDO::FETCH_ASSOC);
-       
-        $user_lv = $lv['lv_user'];
+        $select_lv = mysqli_query($conn,"SELECT * FROM expuser WHERE IdUser = '$user_id'");
+        $user_lv = mysqli_fetch_array($select_lv);
+        $lv = $user_lv['lv_user'];
         
     }else{
         $user_lv = 0;
         $user_name = 'Đăng kí/ Đăng nhập';
+        
     }
+
+
 ?>
   
   
   <!-- HEADER_WEBSITE -->
   <header>
-        <!-- Logo of header -->     
+        <!-- Logo of header -->         
         <div class='logo'>
-            <img src="../Home/img/logo_1.png" alt="">
+            <img src="../Home/img/logo_1.png" alt=""  onclick = 'window.location.href="../Home/index.php"'>
         </div>
         <!-- Thanh tìm kiếm -->
         <form action="" class="search-bar">

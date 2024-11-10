@@ -1,18 +1,13 @@
-/* Main Section */
-main {
-  font-family: "Open Sans", sans-serif;
-  font-size: 1.6rem;
-  line-height: 1.5;
-  color: #111;
-  position: absolute;
-  left: 7.3rem;
-  width: calc(100% - 7rem);
-  height: 100%;
-  top: 5rem;
-  background-color: var(--bg_color);
-  padding: 2rem;
+:root {
+  --bg_color: #f0f0f0;
+  --header_color: #fcb3b3;    
+  --yellow-color:#f9a01b;
+  --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+  --white-dark: #f0f0f0;
+  --menu-color: white;
+  --focus-hover-color: rgb(192, 192, 192, .5);
+  --focus-hover-color-darker: rgba(0, 0, 0, 0.712);
 }
-
 /* Anime List Section */
 .anime-list {
   position: relative;
@@ -20,17 +15,18 @@ main {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  background-color: #fcb3b0;
-  padding: 4rem;
+  background-color:var(--header_color);
+  padding: 4rem 4rem 0 4rem;
   margin: 3rem;
-  border-radius: 2rem;
-  overflow: hidden;
+  border-radius: 1rem;
+
 }
 
 .anime-list-item {
   flex-basis: 20%;
-  padding: 1rem;
+  padding: 3rem 1rem 1rem 1rem;
   box-sizing: border-box;
+  border-radius: 1rem;
 }
 
 .anime-list-item img {
@@ -39,31 +35,45 @@ main {
   max-width: 100%;
   height: 30rem;
   transition: transform 0.3s ease;
+  border: 2px solid black;
+  border-radius: 1rem;
 }
 
 .anime-list-item:hover img {
   transform: scale(1.06);
+  box-shadow: .5rem .5rem .7rem var(--focus-hover-color-darker);
 }
 
 .anime-name {
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-  font-size: 1.6rem;
-  padding: 1rem;
+  margin-top: 1.9rem;
   opacity: 0;
   transition: opacity 0.3s ease;
+  color: black;
+  background-color:var(--yellow-color) ;
+  display: flex; 
+    justify-content: center; 
+  align-items: center;
+  text-align: center;
+  height: 4rem;
+  border-radius: 1rem;
 }
 
-.anime-list-item:hover .anime-name {
+.anime-name a {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 500;
+  
+}
+
+.anime-list-item:hover .anime-name  {
   opacity: 1;
 }
 
 /* Hot Logo */
 .hot-tag {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  top: 1.5rem;
+  left: 5.5rem;
   background-color: red;
   color: white;
   padding: 0.5rem 1rem;
@@ -73,6 +83,16 @@ main {
   animation: pulse 1.5s infinite;
 }
 
+
+.text-hot {
+  position: absolute;
+  top: .8rem;
+  left: 42rem;
+  color: black;
+  font-size:3.5rem ;
+  font-weight:bold ;
+
+}
 @keyframes pulse {
   0% {
       transform: scale(1);
@@ -85,13 +105,21 @@ main {
   }
 }
 
-/* See More Link */
+
 .see-more-link {
   position: absolute;
-  top: 1rem;
+  top: 2rem;
   right: 2rem;
-  font-size: 2rem;
-  color: violet;
+  font-size: 2rem;  
+}
+
+.see-more-link a{
+  color: white;
+  background-color: var(--yellow-color);
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  border-radius: 1rem;
+  border: 0.2rem solid black;
 }
 
 .see-more-bottom {
@@ -101,45 +129,45 @@ main {
   margin-top: 2rem;
 }
 
-/* Propose Heading */
+
 .section-heading {
-  font-size: 2.4rem;
-  margin: 2rem 1rem;
+  font-size: 4rem;
   text-align: center;
   font-weight: bold;
+  background-color: var(--yellow-color);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
 }
 
-/* Slider Section */
+
 .slider-container {
   position: relative;
   width: 100%;
-  max-width: 80%;
-  margin: auto;
+  height: 50rem;
   background-color: #f8d7da;
   border-radius: 1rem;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2rem;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 40% 50;
 }
 
 .slider-img {
+width: 45%;
+height: 10rem;
+
+}
+.slider-img img{
   border-radius: 1rem;
-  width: 55rem;
-  height: 45rem;
   object-fit: cover;
 }
 
 .slider-info {
-  margin-top: 0.5rem;
-  overflow: hidden;
   padding: 3rem;
   background: rgba(255, 255, 255, 0.8);
   border-radius: 1.5rem;
   font-size: 1.7rem;
-  height: 40rem;
-  line-height: 1.6;
+  height: auto;
 }
 
 .see-now-btn {

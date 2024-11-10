@@ -1,24 +1,16 @@
 <?php 
 include '../components/connect.php';
 
-session_start();
-
-if(isset($_SESSION['user_id'])){
-    $user_id = $_SESSION['user_id'];
-}else{
-    $user_id = '';
-}
 
 if(isset($_POST['submit'])){
     $username = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $phone =$_POST['phone'];
-
-    $select_user = $conn->prepare("SELECT * FROM `user` WHERE user_email = ? OR user_phone = ?");
-    $select_user->execute([$email, $phone]);
     
-    if($select_user ->rowCount() > 0){
+    $select_user = mysqli_query($conn,"SELECT * FROM `users` WHERE SDT = '$phone' OR EmailUser = '$email'");
+    
+    if(mysqli_num_rows($select_user) > 0){
         $message[]="Tài khoản đã tồn tại! ";
         if(!empty($message)){
             foreach($message as $msg){
@@ -26,14 +18,12 @@ if(isset($_POST['submit'])){
             }
         }
     }else{
-        $add_user = $conn->prepare("INSERT INTO`user` (user_name,user_email,user_password,user_phone) VALUES(?,?,?,?)");
-        $add_user->execute([$username,$email, $password, $phone]);
+        $add_user = mysqli_query($conn,"INSERT INTO `users` (SDT,NameUser,EmailUser,PasswordUser) VALUES('$phone','$username','$email', '$password')");
         
-        $id_user= $conn ->lastInsertId();
-
-        $add_user_exp = $conn->prepare("INSERT INTO `user_exp` (id_user,lv_user) VALUES (?,?)");
-        $add_user_exp->execute([$id_user,0]);
-
+        $id_user= mysqli_insert_id($conn);
+        
+        $add_user_exp = mysqli_query($conn,"INSERT INTO `expuser` (IdUser) VALUES('$id_user')");
+        
         
         $_SESSION["user_id"]= $id_user;       
         header("Location: ../Home/index.php");
@@ -61,7 +51,7 @@ if(isset($_POST['submit'])){
     <div class ="main-login">
         <div class="wrapper">
             <div class="login-box">
-                <form action="" method="post">
+                <form action="" method="POST">
                     <h2>Đăng kí</h2>
                     <div class="input-box">
                         <i class="fa-solid fa-user"></i>
@@ -84,8 +74,8 @@ if(isset($_POST['submit'])){
                     </div>
 
                     <div class="input-box">
-                        <i class="fa-solid fa-lock"></i>
-                        <input type="tel" name="phone"
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="Phone"  name="phone"
                         placeholder="Phone" required>
                     </div>
 
