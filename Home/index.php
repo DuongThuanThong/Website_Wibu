@@ -14,20 +14,24 @@
     <link rel="stylesheet" href="../components/css/global.css">
     <link rel="stylesheet" href="../components/css/header_sidebar_footer.css">
     <link rel="stylesheet" href="css/home.css">
+
+          
+
+        
     <title>Wibu Dreamland</title>
 </head>
 <body>
-      <!-- Include Header -->
-      <?php include '../components/header.php'; ?>
-      
-      <!-- MAIN_WEBSITE -->
+    <!-- Include Header -->
+    <?php include '../components/header.php'; ?>
+    
+    <!-- MAIN_WEBSITE -->
     <main>
           <!-- Include Sidebar -->
-        <?php include '../components/sidebar.php'; ?>
-
+          <?php include '../components/sidebar.php'; ?>
+          
           <!-- HOME-CONTENT -->
-        <div class="home-content">
-            <div class="content">
+          <div class="home-content">
+              <div class="content">
 
                 <!-- SLIDE-SHOW -->
                 <div class="slide-show">
@@ -188,18 +192,72 @@
                     </div>
                 </div>
                 
-            </div>
-        </div>
-    </main>
 
+
+                <!-- PRODUCTS -->
+
+                <div class="container">
+                        <?php
+                            function getProducts($name_category, $conn, $sanpham,$link){
+                                $product = "SELECT * FROM `$sanpham` ORDER BY ID DESC LIMIT 5";
+                                $result = $conn->query($product);
+                                if ($result->num_rows > 0) {
+                                    echo '<div class="section">
+                                        <h2>
+                                            ' .$name_category. '
+                                            <a href="'.$link.'">Xem tất cả »</a>
+                                        </h2>
+                                        <div class="product-list">';
+                        
+                                    while ($row = $result->fetch_assoc()) {
+                                        echo '<div class="product">';
+                                        echo '<img src="' . $row['Img1'] . '">';
+                                        
+                                        echo '<div class="name">' . $row['Name'] . '</div>';
+                                        if ($row['SoLuongDaBan'] == $row['SoLuongTonKho']) {
+                                            echo '<div class="sold-out" style ="background: orange">Hết hàng</div>';
+                                            
+                                        } else {
+                                            if ($row['Sale'] > 0) {
+                                                echo '<div class="discount">-' . $row['Sale'] . '%</div>';
+                                                
+                                                //Tính giá giảm không sợ lỗ
+                                                $Giacu = number_format(($row['Gia'] / (1-$row['Sale'] / 100)));
+                                            }
+                                           
+                                            echo '<div class="price">' . number_format($row['Gia']) . '₫</div>';
+                                            if (isset($Giacu)) {
+                                                echo '<div class="old-price">' . $Giacu . '₫</div>';
+                                            }
+                                            echo '<div class="heart-icon"><i class="fa-regular fa-heart" style="color: #f70202;"></i></div>'; 
+                                        }
+                                        echo '</div>';
+                                    }
+                                    
+                                    echo '</div> </div><br><br><br>';
+                                }
+                            }
+                                getProducts ('Mô hình', $conn, 'mohinh','../Mohinh/mohinh.php');
+                                getProducts ('Truyện tranh',$conn,'magma','../Manga/manga.php');
+                                getProducts ('Cosplay',$conn, 'cosplay','../Cosplay/cosplay.php');
+                        ?> 
+                </div> 
+
+
+
+
+              </div>
+          </div>
+    </main>
+                            
 
     <?php include "../components/footer.php"?>
     
-
-
-    <!-- Javascript -->
+  <!-- Javascript -->
     <script src="../components/js/global.js" defer></script>
-    <script src="js/home.js" defer></script>
+    <script src="js/home.js"defer></script>
+
+
     
 </body>
 </html> 

@@ -82,8 +82,7 @@ function count_Time_FS(){
 //- Nhấn vào trái tim trong flash-sale sẽ hiện trái tim màu 
 
 
-window.onload = function() {
+window.addEventListener('load', function() {
     slideOpenClose();
     count_Time_FS();
-
-};
+});

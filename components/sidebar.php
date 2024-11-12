@@ -22,7 +22,7 @@
                     </li>
                     <!-- Managa -->
                     <li class="nav-list-item">
-                        <a href="#" class ="nav-link">
+                        <a href="../Manga/manga.php" class ="nav-link">
                             <img src="https://img.icons8.com/ios-glyphs/30/book.png" alt="book"/>
                             <span>Manga</span>
                         </a>
@@ -30,7 +30,7 @@
                     </li>
                     <!-- Mô hình -->
                     <li class="nav-list-item">
-                        <a href="#" class ="nav-link">
+                        <a href="../Mohinh/mohinh.php" class ="nav-link">
                             <img src="https://img.icons8.com/ios-filled/50/mobile-suit-gundam.png" alt="mobile-suit-gundam"/>
                             <span>Mô hình</span>
                         </a>
@@ -38,7 +38,7 @@
                     </li>
                     <!-- Trang phục Cosplay -->
                     <li class="nav-list-item">
-                        <a href="#" class ="nav-link">
+                        <a href="../Cosplay/cosplay.php" class ="nav-link">
                             <img src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/66/external-Cosplay-geek-smashingstocks-glyph-smashing-stocks.png" alt="external-Cosplay-geek-smashingstocks-glyph-smashing-stocks"/>
                             <span>Trang phục Cosplay</span>
                         </a>

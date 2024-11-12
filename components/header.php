@@ -12,10 +12,13 @@
         $select_lv = mysqli_query($conn,"SELECT * FROM expuser WHERE IdUser = '$user_id'");
         $user_lv = mysqli_fetch_array($select_lv);
         $lv = $user_lv['lv_user'];
-        
+        $exp = $user_lv['exp'];
+        $max_exp = $user_lv['max_exp'];
     }else{
-        $user_lv = 0;
+        $lv = 0;
         $user_name = 'Đăng kí/ Đăng nhập';
+        $exp = 0;
+        $max_exp = 0;
         
     }
 
@@ -38,8 +41,8 @@
         <div class="exp-bar">
             <span class ="exp">  
                 EXP:
-                <span id="exp-value">0</span>
-                <span id="exp-value-max">/220</span>
+                <span id="exp-value"><?php echo $exp?></span>
+                <span id="exp-value-max"><?php echo "/".$max_exp?></span>
             </span>
             <div class="progress">
                 <div id="exp-progress"></div>
@@ -56,7 +59,7 @@
     
                 <div class ="user-info">
                     <span id = "user-name"><?php echo $user_name?></span>
-                    <span id = "lv">Lv: <?php echo $user_lv?></span>
+                    <span id = "lv">Lv: <?php echo $lv ?></span>
                 </div>
 
                 <!-- Dropdown Menu -->

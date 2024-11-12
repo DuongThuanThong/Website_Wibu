@@ -18,7 +18,7 @@ function siderOpenClose(){
 }
 
 
-window.onload = function() {
+window.addEventListener('load', function() {
     siderOpenClose();
     dropdownOpenClose();
-}
+});
