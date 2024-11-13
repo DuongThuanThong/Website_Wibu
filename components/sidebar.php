@@ -5,7 +5,7 @@
                 <div class="menu-btn"><i class="fa-solid fa-bars" id = "btn-sidebar"></i></div>
                 <ul class ="nav-list">
                     <li class="nav-list-item">
-                        <a href="../Home/index.php" class="nav-link">
+                        <a href="/Home/index.php" class="nav-link">
                             <img src="https://img.icons8.com/fluency-systems-filled/50/home.png" alt="home"/>
                             <span class = "link-text">Trang chủ</span>
                         </a>
@@ -14,7 +14,7 @@
         
                     <!-- Anime -->
                     <li class="nav-list-item">
-                        <a href="../Anime/Ani_index.php" class ="nav-link">
+                        <a href="/Anime/Ani_index.php" class ="nav-link">
                             <img src="https://img.icons8.com/ios-filled/50/doraemon.png" alt="doraemon"/>
                             <span>Bảng xếp hạng Anime</span>
                         </a>
@@ -22,7 +22,7 @@
                     </li>
                     <!-- Managa -->
                     <li class="nav-list-item">
-                        <a href="../Manga/manga.php" class ="nav-link">
+                        <a href="/Pagesproducts/Manga/manga.php" class ="nav-link">
                             <img src="https://img.icons8.com/ios-glyphs/30/book.png" alt="book"/>
                             <span>Manga</span>
                         </a>
@@ -30,7 +30,7 @@
                     </li>
                     <!-- Mô hình -->
                     <li class="nav-list-item">
-                        <a href="../Mohinh/mohinh.php" class ="nav-link">
+                        <a href="/Pagesproducts/Mohinh/mohinh.php" class ="nav-link">
                             <img src="https://img.icons8.com/ios-filled/50/mobile-suit-gundam.png" alt="mobile-suit-gundam"/>
                             <span>Mô hình</span>
                         </a>
@@ -38,7 +38,7 @@
                     </li>
                     <!-- Trang phục Cosplay -->
                     <li class="nav-list-item">
-                        <a href="../Cosplay/cosplay.php" class ="nav-link">
+                        <a href="/Pagesproducts/Cosplay/cosplay.php" class ="nav-link">
                             <img src="https://img.icons8.com/external-smashingstocks-glyph-smashing-stocks/66/external-Cosplay-geek-smashingstocks-glyph-smashing-stocks.png" alt="external-Cosplay-geek-smashingstocks-glyph-smashing-stocks"/>
                             <span>Trang phục Cosplay</span>
                         </a>

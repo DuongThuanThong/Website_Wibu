@@ -1,5 +1,5 @@
 <?php
-    include ("../components/connect.php");
+    include ("/Z.Xampp-PHP/xampp/htdocs/_DoAnWeb/components/connect.php");
     
     if (isset($_SESSION['user_id'])){
         $user_id = $_SESSION['user_id'];
@@ -30,7 +30,7 @@
   <header>
         <!-- Logo of header -->         
         <div class='logo'>
-            <img src="../Home/img/logo_1.png" alt=""  onclick = 'window.location.href="../Home/index.php"'>
+            <img src="/Home/img/logo_1.png" alt=""  onclick = 'window.location.href="/Home/index.php"'>
         </div>
         <!-- Thanh tìm kiếm -->
         <form action="" class="search-bar">
