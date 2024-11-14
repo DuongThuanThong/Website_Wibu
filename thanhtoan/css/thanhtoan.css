@@ -287,11 +287,12 @@ label {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: -38rem;
+    margin-top: 68rem;
     margin-left: 93rem;
     width: 50rem;
     margin-bottom: 10rem;
     z-index: 10;
+    
 }
 
 .voucher select {
