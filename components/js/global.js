@@ -17,6 +17,12 @@ function siderOpenClose(){
     }
 }
 
+// Mở/Đóng popup giỏ hàng
+function toggleCartPopup() {
+    const cartPopup = document.getElementById('cart-popup');
+    cartPopup.style.display = cartPopup.style.display === 'block' ? 'none' : 'block';
+}
+
 
 window.addEventListener('load', function() {
     siderOpenClose();

@@ -665,3 +665,213 @@ main .home-content .content {
     background-color: white;
     border-radius: 10rem;
 }
+
+/*-----------------------------------------------GIỎ HÀNG VƯƠNG ------------------------------------------*/
+
+.cart-popup {
+    display: none; /* Ẩn pop-up theo mặc định */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
+    z-index: 1001; /* Đặt nó lên trên */
+}
+
+.cart-popup-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Chiều rộng của pop-up */
+    max-width: 500px; /* Độ rộng tối đa */
+    border-radius: 10px; /* Bo tròn các góc */
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Popup giỏ hàng */
+.cart-popup {
+    display: none; /* Ẩn pop-up theo mặc định */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Màu nền mờ */
+    z-index: 1001; /* Đặt nó lên trên */
+    backdrop-filter: blur(5px); /* Hiệu ứng mờ cho nền */
+}
+
+.cart-popup-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Chiều rộng của pop-up */
+    max-width: 500px; /* Độ rộng tối đa */
+    border-radius: 10px; /* Bo tròn các góc */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Đổ bóng */
+    position: relative; /* Để đặt vị trí cho nút đóng */
+}
+
+.cart-popup h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: var(--yellow-color); /* Màu chữ */
+}
+
+.cart-items {
+    max-height: 300px; /* Giới hạn chiều cao */
+    overflow-y: auto; /* Cuộn dọc */
+    margin-bottom: 20px; /* Khoảng cách dưới cùng */
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px; /* Khoảng cách giữa các sản phẩm */
+    padding: 10px;
+    border-bottom: 1px solid #ccc; /* Đường viền dưới */
+}
+
+.cart-item img {
+    width: 60px; /* Chiều rộng hình ảnh */
+    height: auto;
+    margin-right: 15px; /* Khoảng cách bên phải */
+    border-radius: 5px; /* Bo tròn góc hình ảnh */
+}
+
+.item-details {
+    flex-grow: 1; /* Chiếm không gian còn lại */
+}
+
+.item-details h2 {
+    font-size: 1.4rem; /* Kích thước tiêu đề sản phẩm */
+    margin: 0;
+    color: #333; /* Màu chữ */
+}
+
+.item-details p {
+    margin: 5px 0; /* Khoảng cách giữa các dòng */
+    font-weight: bold; /* Chữ đậm */
+    color: var(--yellow-color); /* Màu giá */
+}
+
+.item-quantity {
+    width: 50px; /* Chiều rộng ô nhập số lượng */
+    margin-right: 10px; /* Khoảng cách bên phải */
+}
+
+.remove-btn {
+    background-color: var(--yellow-color); /* Màu nền nút */
+    color: white; /* Màu chữ */
+    border: none; /* Không đường viền */
+    padding: 5px 10px; /* Khoảng cách bên trong nút */
+    border-radius: 5px; /* Bo tròn góc */
+    cursor: pointer; /* Con trỏ chuột */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+.remove-btn:hover {
+    background-color: #e1a300; /* Màu khi hover */
+}
+
+.cart-summary {
+    text-align: center; /* Căn giữa */
+}
+
+.cart-summary h2 {
+    font-size: 1.5rem; /* Kích thước tiêu đề tổng tiền */
+    margin: 0; /* Bỏ khoảng cách */
+}
+
+.checkout-btn {
+    background-color: var(--yellow-color); /* Màu nền nút thanh toán */
+    color: white; /* Màu chữ */
+    border: none; /* Không đường viền */
+    padding: 10px 20px; /* Khoảng cách bên trong nút */
+    border-radius: 5px; /* Bo tròn góc */
+    cursor: pointer; /* Con trỏ chuột */
+    transition: background-color 0.3s; /* Hiệu ứng chuyển màu */
+}
+
+.checkout-btn:hover {
+    background-color: #e1a300; /* Màu khi hover */
+}
+
+/* Nút đóng */
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute; /* Đặt vị trí của nút */
+    right: 20px;
+    top: 20px;
+}
+.book-list {
+    margin: 2rem;
+}
+
+.book-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem; /* Khoảng cách giữa các sản phẩm */
+}
+
+.book-item {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.book-item:hover {
+    transform: scale(1.05); /* Hiệu ứng phóng to khi hover */
+}
+
+.book-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.book-item h2 {
+    font-size: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.book-item p {
+    font-size: 1.2rem;
+    color: #f9a01b; /* Màu vàng cho giá */
+}
+
+.book-item button {
+    background-color: #f9a01b;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.book-item button:hover {
+    background-color: #e18b00; /* Màu khi hover */
+}

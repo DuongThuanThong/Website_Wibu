@@ -66,7 +66,7 @@
                 <div class="dropdown-menu">
                     <?php
                         if (isset($_SESSION['user_id'])){
-                            echo ' <a href="#">Thông tin tài khoản</a>';
+                            echo ' <a href="/thongtinkhachhang/thongtinkhachhang.php">Thông tin tài khoản</a>';
                             echo ' <a href="#">Đơn hàng</a>';
                             echo ' <a href="#">Kho vocher</a>';
                             echo '<a href="../login&registration/logout.php">Đăng xuất</a>';
@@ -79,15 +79,30 @@
 
             </div>
             
-            <a href="../YeuThich/YeuThich.html" class = "favorite-heart">
+            <a href="/YeuThich/yeuthich.php" class = "favorite-heart">
                 <i class="fa-regular fa-heart"></i>
                 <span>Sản phẩm yêu thích</span>
             </a>
 
-            <div class = 'cart-shop'>
+            <div class = 'cart-shop' onclick="toggleCartPopup()">
                 <i class="fa-solid fa-cart-shopping"></i>
                 <span>Giỏ hàng</span>
             </div>
+
+            <!-- GIỎ HÀNG -->
+                <div id="cart-popup" class="cart-popup">
+                    <div class="cart-popup-content">
+                        <span class="close-btn" onclick="toggleCartPopup()">&times;</span>
+                        <h1>Giỏ hàng của bạn</h1>
+                        <div class="cart-items"></div>
+                        <div class="cart-summary">
+                            <h2>Tổng tiền: <span id="total-price">0 VNĐ</span></h2>
+                            <button class="checkout-btn" >
+                                <a href="../thanhtoan/thanhtoan.php">Thanh toán</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
         </div>
     </header>
 

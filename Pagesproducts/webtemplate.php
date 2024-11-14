@@ -22,7 +22,7 @@ function generateHTMLPagesProducts($sanpham, $name_category) {
         <link rel="stylesheet" href="/components/css/global.css">
         <link rel="stylesheet" href="/components/css/header_sidebar_footer.css">
         <link rel="stylesheet" href="/Home/css/home.css">
-        <link rel="stylesheet" href="/components/css/listproducts.css">
+        <link rel="stylesheet" href="/Pagesproducts/css/listproducts.css">
         <title><?php echo $name_category; ?></title>
     </head>
     <body>
@@ -78,6 +78,8 @@ function generateHTMLPagesProducts($sanpham, $name_category) {
         <?php include "../../components/footer.php"?>
 
         <script src="/components/js/global.js" defer></script>
+
+       
     </body>
     </html>
     <?php

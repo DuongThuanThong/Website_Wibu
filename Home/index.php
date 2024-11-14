@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../components/css/global.css">
     <link rel="stylesheet" href="../components/css/header_sidebar_footer.css">
     <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="../components/css/listproducts.css">
+    <link rel="stylesheet" href="../Pagesproducts/css/listproducts.css">
           
 
         
