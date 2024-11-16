@@ -230,9 +230,9 @@
                                     echo '</div> </div><br><br><br>';
                                 }
                             }
-                                getProducts ('Mô hình', $conn, 'mohinh','../Mohinh/mohinh.php');
-                                getProducts ('Truyện tranh',$conn,'magma','../Manga/manga.php');
-                                getProducts ('Cosplay',$conn, 'cosplay','../Cosplay/cosplay.php');
+                                getProducts ('Mô hình', $conn, 'mohinh','/Pagesproducts/Mohinh/mohinh.php');
+                                getProducts ('Truyện tranh',$conn,'magma','/Pagesproducts/Manga/manga.php');
+                                getProducts ('Cosplay',$conn, 'cosplay','/Pagesproducts/Cosplay/cosplay.php');
                         ?> 
                 </div> 
 

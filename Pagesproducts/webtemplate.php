@@ -43,7 +43,7 @@ function generateHTMLPagesProducts($sanpham, $name_category) {
                     
                                 while ($row = $result->fetch_assoc()) {
                                     echo '<div class="product">';
-                                    echo '<img src="' . $row['Img1'] . '">';
+                                    echo '<img src="/admin/' . $row['Img1'] . '">';
                                     
                                     echo '<div class="name">' . $row['Name'] . '</div>';
                                     if ($row['SoLuongDaBan'] == $row['SoLuongTonKho']) {

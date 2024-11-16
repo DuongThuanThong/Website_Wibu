@@ -1,5 +1,5 @@
 <?php
-    include ("/Z.Xampp-PHP/xampp/htdocs/_DoAnWeb/components/connect.php");
+    include ("connect.php");
     
     if (isset($_SESSION['user_id'])){
         $user_id = $_SESSION['user_id'];
