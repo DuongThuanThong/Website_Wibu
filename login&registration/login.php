@@ -14,8 +14,11 @@ if (isset($_POST['submit'])) { // Kiểm tra xem form đăng nhập đã đượ
 
         $_SESSION["user_id"] = $row["IdUser"]; // Lưu ID người dùng vào session để sử dụng cho các thao tác sau
 
-        header("Location: ../Home/index.php"); // Chuyển hướng đến trang chủ nếu đăng nhập thành công
-        exit(); // Dừng thực thi các dòng mã phía sau sau khi chuyển hướng
+        if ($row["role"] == "0") {
+            header ("Location: ../admin/admin.php");
+        } else if ($row["role"] == "1") {
+            header("Location: ../Home/index.php"); // Chuyển hướng đến trang chủ nếu đăng nhập thành công
+        }
     } else {
         // Nếu thông tin đăng nhập không chính xác, thêm thông báo lỗi vào mảng `$message`
         $message[] = "Email đăng nhập hoặc mật khẩu không chính xác!";
