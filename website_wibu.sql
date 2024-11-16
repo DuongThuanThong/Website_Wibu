@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 06, 2024 lúc 12:39 PM
+-- Thời gian đã tạo: Th10 16, 2024 lúc 03:29 AM
 -- Phiên bản máy phục vụ: 10.4.32-MariaDB
 -- Phiên bản PHP: 8.2.12
 
@@ -41,10 +41,10 @@ CREATE TABLE `anime` (
 --
 
 CREATE TABLE `cosplay` (
-  `NameCosplay` int(11) NOT NULL,
+  `Name` varchar(255) NOT NULL,
   `Img1` varchar(255) NOT NULL,
   `Img2` varchar(255) DEFAULT NULL,
-  `Gia` int(11) NOT NULL,
+  `Gia` float NOT NULL,
   `SoLuongTonKho` int(11) NOT NULL,
   `SoLuongDaBan` int(11) NOT NULL DEFAULT 0,
   `Sale` int(11) NOT NULL,
@@ -64,6 +64,14 @@ CREATE TABLE `expuser` (
   `max_exp` int(11) NOT NULL DEFAULT 100,
   `lv_user` int(11) DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `expuser`
+--
+
+INSERT INTO `expuser` (`IdUser`, `exp`, `max_exp`, `lv_user`) VALUES
+(3, 0, 100, 0),
+(1, 20, 100, 20);
 
 -- --------------------------------------------------------
 
@@ -101,10 +109,10 @@ CREATE TABLE `giohang_chitiet` (
 --
 
 CREATE TABLE `magma` (
-  `NameMagma` text NOT NULL,
+  `Name` text NOT NULL,
   `Img1` text NOT NULL,
   `Img2` text NOT NULL,
-  `Gia` int(11) NOT NULL,
+  `Gia` float NOT NULL,
   `SoLuongTonKho` int(11) NOT NULL,
   `SoLuongDaBan` int(11) NOT NULL,
   `Sale` int(11) NOT NULL,
@@ -119,7 +127,7 @@ CREATE TABLE `magma` (
 --
 
 CREATE TABLE `mohinh` (
-  `NameMoHinh` varchar(255) NOT NULL,
+  `Name` varchar(255) NOT NULL,
   `Img1` varchar(255) NOT NULL,
   `Img2` varchar(255) NOT NULL,
   `Gia` float NOT NULL,
@@ -129,6 +137,14 @@ CREATE TABLE `mohinh` (
   `TheLoai` int(11) NOT NULL,
   `ID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `mohinh`
+--
+
+INSERT INTO `mohinh` (`Name`, `Img1`, `Img2`, `Gia`, `SoLuongTonKho`, `SoLuongDaBan`, `Sale`, `TheLoai`, `ID`) VALUES
+('dgdg', '_imgProduct/mohinh/1731663910_Screenshot 2024-10-27 100422.png', '', 6000, 20, 3, 60, 1, 5),
+('hfh', '_imgProduct/mohinh/1731663931_bocchi-walking-in-the-rain-thumb.jpg', '', 2000, 3000, 2, 10, 1, 6);
 
 -- --------------------------------------------------------
 
@@ -141,6 +157,15 @@ CREATE TABLE `theloai_sanpham` (
   `TheLoai` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `theloai_sanpham`
+--
+
+INSERT INTO `theloai_sanpham` (`IdTheLoai`, `TheLoai`) VALUES
+(1, '[Mô hình]'),
+(2, '[Truyện tranh]'),
+(3, '[Trang phục cosplay]');
+
 -- --------------------------------------------------------
 
 --
@@ -152,15 +177,18 @@ CREATE TABLE `users` (
   `SDT` varchar(11) NOT NULL,
   `NameUser` varchar(50) NOT NULL,
   `EmailUser` varchar(50) NOT NULL,
-  `PasswordUser` varchar(50) NOT NULL
+  `PasswordUser` varchar(50) NOT NULL,
+  `role` int(11) NOT NULL DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `users`
 --
 
-INSERT INTO `users` (`IdUser`, `SDT`, `NameUser`, `EmailUser`, `PasswordUser`) VALUES
-(1, '0917610804', 'Dương Thuận Thông', 'thuanthong675@gmail.com', '123456789');
+INSERT INTO `users` (`IdUser`, `SDT`, `NameUser`, `EmailUser`, `PasswordUser`, `role`) VALUES
+(1, '0917610804', 'Dương Thuận Thông', 'thuanthong675@gmail.com', '123456789', 0),
+(2, '123456789', 'Dương Thuận Buồm', 'traolongngonqu@gmail.com', '123456789', 1),
+(3, '987654321', 'Dương Văn', 'duongvan@gmail.com', '123456789', 1);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -225,22 +253,40 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT cho bảng `cosplay`
+--
+ALTER TABLE `cosplay`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
 -- AUTO_INCREMENT cho bảng `giohang_chitiet`
 --
 ALTER TABLE `giohang_chitiet`
   MODIFY `IdGioHangChiTiet` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT cho bảng `magma`
+--
+ALTER TABLE `magma`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT cho bảng `mohinh`
+--
+ALTER TABLE `mohinh`
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT cho bảng `theloai_sanpham`
 --
 ALTER TABLE `theloai_sanpham`
-  MODIFY `IdTheLoai` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `IdTheLoai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT cho bảng `users`
 --
 ALTER TABLE `users`
-  MODIFY `IdUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `IdUser` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
